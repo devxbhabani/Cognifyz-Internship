@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Level 1 Task 2 | JavaScript</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container navigation">
+				<a class="brand" href="index.html">JavaScript Lab</a>
+				<span class="level-label">Level 1 · Task 2</span>
+			</div>
+		</header>
+
+		<main class="container page-content">
+			<section class="intro">
+				<p class="eyebrow">JavaScript</p>
+				<h1>
+					Small interactions,
+					<br />
+					<span>clear results.</span>
+				</h1>
+				<p class="intro-copy">
+					Practice event handling, browser alerts, and simple calculations
+					with three focused JavaScript exercises.
+				</p>
+			</section>
+
+			<section class="exercise-grid" aria-label="JavaScript exercises">
+				<article class="exercise-card color-card">
+					<div class="card-number">01</div>
+					<h2>Color switcher</h2>
+					<p>Click the button to change its color.</p>
+					<button
+						class="action-button color-button"
+						id="colorButton"
+						type="button"
+					>
+						Change my color
+					</button>
+				</article>
+
+				<article class="exercise-card greeting-card">
+					<div class="card-number">02</div>
+					<h2>Time greeting</h2>
+					<p>Get a greeting based on the current time.</p>
+					<button
+						class="action-button greeting-button"
+						id="greetingButton"
+						type="button"
+					>
+						Show greeting
+					</button>
+				</article>
+
+				<article class="exercise-card calculator-card">
+					<div class="card-number">03</div>
+					<h2>Addition calculator</h2>
+					<p>Enter two numbers and display their sum.</p>
+					<form class="calculator-form" id="calculatorForm">
+						<div class="number-fields">
+							<label>
+								<span>First number</span>
+								<input
+									id="firstNumber"
+									type="number"
+									placeholder="0"
+									required
+								/>
+							</label>
+							<label>
+								<span>Second number</span>
+								<input
+									id="secondNumber"
+									type="number"
+									placeholder="0"
+									required
+								/>
+							</label>
+						</div>
+						<button class="action-button calculate-button" type="submit">
+							Add numbers
+						</button>
+					</form>
+					<p class="result" id="calculatorResult" aria-live="polite">
+						Your result will appear here.
+					</p>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>
