@@ -29,7 +29,6 @@ html {
 	border-bottom: 1px solid #cbd5e1;
 }
 
-/* Card Hover Micro-animations */
 .hover-lift {
 	transition:
 		transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
@@ -41,7 +40,6 @@ html {
 	box-shadow: var(--card-shadow-hover) !important;
 }
 
-/* Image Aspect Ratio and Hover Zoom */
 .card-img-wrapper {
 	position: relative;
 	overflow: hidden;
@@ -60,7 +58,6 @@ html {
 	transform: scale(1.05);
 }
 
-/* Grid Visualizer Pill */
 .grid-spec-pill {
 	font-size: 0.75rem;
 	font-family:
@@ -72,7 +69,6 @@ html {
 	display: inline-block;
 }
 
-/* Framework Badges */
 .badge-bootstrap {
 	background-color: #7952b3;
 	color: #ffffff;
@@ -83,7 +79,6 @@ html {
 	color: #ffffff;
 }
 
-/* Custom Bulma Overrides */
 .bulma-custom-card {
 	border-radius: 12px;
 	overflow: hidden;
