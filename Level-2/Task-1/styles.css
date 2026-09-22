@@ -1,118 +1,120 @@
-/* ==========================================================================
-   Cognifyz Internship - Level 2, Task 1
-   Custom Styling & Micro-Interactions
-   ========================================================================== */
-
 :root {
-  --cognifyz-green: #67b26f;
-  --cognifyz-blue: #4ca2cd;
-  --cognifyz-dark: #1e293b;
-  --cognifyz-light: #f8fafc;
-  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  --card-shadow-hover: 0 20px 35px -5px rgba(0, 0, 0, 0.15), 0 12px 15px -6px rgba(0, 0, 0, 0.08);
+	--cognifyz-green: #67b26f;
+	--cognifyz-blue: #4ca2cd;
+	--cognifyz-dark: #1e293b;
+	--cognifyz-light: #f8fafc;
+	--card-shadow:
+		0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+	--card-shadow-hover:
+		0 20px 35px -5px rgba(0, 0, 0, 0.15), 0 12px 15px -6px rgba(0, 0, 0, 0.08);
 }
 
 /* Smooth Scrolling */
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Custom Navbar Accents */
 .cognifyz-brand {
-  font-weight: 700;
-  letter-spacing: -0.5px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
 }
 
 .brand-gradient {
-  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 /* Hero Section Enhancement */
 .framework-hero {
-  background: radial-gradient(circle at top left, #f1f5f9 0%, #e2e8f0 100%);
-  border-bottom: 1px solid #cbd5e1;
+	background: radial-gradient(circle at top left, #f1f5f9 0%, #e2e8f0 100%);
+	border-bottom: 1px solid #cbd5e1;
 }
 
 /* Card Hover Micro-animations */
 .hover-lift {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+	transition:
+		transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+		box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--card-shadow-hover) !important;
+	transform: translateY(-6px);
+	box-shadow: var(--card-shadow-hover) !important;
 }
 
 /* Image Aspect Ratio and Hover Zoom */
 .card-img-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
+	position: relative;
+	overflow: hidden;
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
 }
 
 .card-img-wrapper img {
-  transition: transform 0.4s ease;
-  object-fit: cover;
-  width: 100%;
-  height: 220px;
+	transition: transform 0.4s ease;
+	object-fit: cover;
+	width: 100%;
+	height: 220px;
 }
 
 .hover-lift:hover .card-img-wrapper img {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 /* Grid Visualizer Pill */
 .grid-spec-pill {
-  font-size: 0.75rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  background-color: #e0f2fe;
-  color: #0369a1;
-  padding: 0.2rem 0.55rem;
-  border-radius: 9999px;
-  display: inline-block;
+	font-size: 0.75rem;
+	font-family:
+		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	background-color: #e0f2fe;
+	color: #0369a1;
+	padding: 0.2rem 0.55rem;
+	border-radius: 9999px;
+	display: inline-block;
 }
 
 /* Framework Badges */
 .badge-bootstrap {
-  background-color: #7952b3;
-  color: #ffffff;
+	background-color: #7952b3;
+	color: #ffffff;
 }
 
 .badge-bulma {
-  background-color: #00d1b2;
-  color: #ffffff;
+	background-color: #00d1b2;
+	color: #ffffff;
 }
 
 /* Custom Bulma Overrides */
 .bulma-custom-card {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--card-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: var(--card-shadow);
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .bulma-custom-card .card-content {
-  flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 .bulma-custom-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--card-shadow-hover);
+	transform: translateY(-5px);
+	box-shadow: var(--card-shadow-hover);
 }
 
 .bulma-custom-card .image img {
-  transition: transform 0.4s ease;
-  object-fit: cover;
-  height: 220px;
-  width: 100%;
+	transition: transform 0.4s ease;
+	object-fit: cover;
+	height: 220px;
+	width: 100%;
 }
 
 .bulma-custom-card:hover .image img {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }

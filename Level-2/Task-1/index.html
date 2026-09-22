@@ -1,350 +1,613 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cognifyz - Level 2 Task 1 | Responsive Grid & Card Components</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: #f8fafc;
-      color: #334155;
-    }
-  </style>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Cognifyz - Level 2 Task 1 | Responsive Grid & Card Components
+		</title>
+		<!-- Bootstrap 5-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			body {
+				font-family:
+					"Inter",
+					system-ui,
+					-apple-system,
+					sans-serif;
+				background-color: #f8fafc;
+				color: #334155;
+			}
+		</style>
+	</head>
+	<body>
+		<nav
+			class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3"
+		>
+			<div class="container">
+				<a
+					class="navbar-brand d-flex align-items-center gap-2"
+					href="index.html"
+				>
+					<span class="badge bg-primary px-2 py-1 fs-6">L2</span>
+					<span class="fw-bold tracking-tight text-white">
+						Cognifyz
+						<span class="text-info">Technologies</span>
+					</span>
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarContent"
+					aria-controls="navbarContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+						<li class="nav-item">
+							<a
+								class="nav-link active fw-medium"
+								aria-current="page"
+								href="index.html"
+							>
+								<i class="bi bi-grid-3x3-gap-fill me-1"></i>
+								Bootstrap Grid Layout
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-medium" href="bulma.html">
+								<i class="bi bi-card-heading me-1"></i>
+								Bulma Cards Showcase
+							</a>
+						</li>
+					</ul>
+					<div class="d-flex align-items-center gap-2">
+						<div
+							class="px-3 py-1 bg-secondary bg-opacity-25 rounded-pill border border-secondary border-opacity-50 text-light small d-flex align-items-center gap-1"
+						>
+							<span class="text-secondary-emphasis">Breakpoint:</span>
+							<span class="fw-bold text-warning d-inline d-sm-none">
+								XS (&lt;576px)
+							</span>
+							<span
+								class="fw-bold text-warning d-none d-sm-inline d-md-none"
+							>
+								SM (&ge;576px)
+							</span>
+							<span
+								class="fw-bold text-warning d-none d-md-inline d-lg-none"
+							>
+								MD (&ge;768px)
+							</span>
+							<span
+								class="fw-bold text-warning d-none d-lg-inline d-xl-none"
+							>
+								LG (&ge;992px)
+							</span>
+							<span
+								class="fw-bold text-warning d-none d-xl-inline d-xxl-none"
+							>
+								XL (&ge;1200px)
+							</span>
+							<span class="fw-bold text-warning d-none d-xxl-inline">
+								XXL (&ge;1400px)
+							</span>
+						</div>
+						<a
+							href="bulma.html"
+							class="btn btn-sm btn-outline-info rounded-pill px-3"
+						>
+							Switch to Bulma View &rarr;
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
 
-  <!-- Top Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <span class="badge bg-primary px-2 py-1 fs-6">L2</span>
-        <span class="fw-bold tracking-tight text-white">Cognifyz <span class="text-info">Technologies</span></span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
-          <li class="nav-item">
-            <a class="nav-link active fw-medium" aria-current="page" href="index.html">
-              <i class="bi bi-grid-3x3-gap-fill me-1"></i> Bootstrap Grid Layout
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="bulma.html">
-              <i class="bi bi-card-heading me-1"></i> Bulma Cards Showcase
-            </a>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center gap-2">
-          <!-- Real-time Breakpoint Detector Badge -->
-          <div class="px-3 py-1 bg-secondary bg-opacity-25 rounded-pill border border-secondary border-opacity-50 text-light small d-flex align-items-center gap-1">
-            <span class="text-secondary-emphasis">Breakpoint:</span>
-            <span class="fw-bold text-warning d-inline d-sm-none">XS (&lt;576px)</span>
-            <span class="fw-bold text-warning d-none d-sm-inline d-md-none">SM (&ge;576px)</span>
-            <span class="fw-bold text-warning d-none d-md-inline d-lg-none">MD (&ge;768px)</span>
-            <span class="fw-bold text-warning d-none d-lg-inline d-xl-none">LG (&ge;992px)</span>
-            <span class="fw-bold text-warning d-none d-xl-inline d-xxl-none">XL (&ge;1200px)</span>
-            <span class="fw-bold text-warning d-none d-xxl-inline">XXL (&ge;1400px)</span>
-          </div>
-          <a href="bulma.html" class="btn btn-sm btn-outline-info rounded-pill px-3">Switch to Bulma View &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+		<header class="framework-hero py-5 border-bottom">
+			<div class="container py-3">
+				<div class="row align-items-center gy-4">
+					<div class="col-lg-8">
+						<div class="d-flex flex-wrap gap-2 mb-3">
+							<span class="badge bg-dark">Level 2 &bull; Task 1</span>
+							<span class="badge badge-bootstrap">
+								<i class="bi bi-bootstrap-fill me-1"></i>
+								Bootstrap 5.3
+							</span>
+							<span class="badge badge-bulma">
+								<i class="bi bi-palette-fill me-1"></i>
+								Bulma 1.0
+							</span>
+						</div>
+						<h1
+							class="display-5 fw-extrabold text-dark tracking-tight mb-3"
+						>
+							Front-end Frameworks:
+							<span class="brand-gradient">Responsive Grid & Cards</span>
+						</h1>
+						<p class="lead text-secondary mb-4">
+							Demonstrating a fluid, multi-tier responsive grid system
+							using
+							<strong>Bootstrap</strong>
+							and responsive card components styled with rich media,
+							headers, and metadata.
+						</p>
+						<div class="d-flex flex-wrap gap-3">
+							<a
+								href="#grid-section"
+								class="btn btn-primary px-4 py-2 rounded-pill fw-semibold shadow-sm"
+							>
+								<i class="bi bi-arrow-down-circle me-2"></i>
+								Explore Grid Layout
+							</a>
+							<a
+								href="bulma.html"
+								class="btn btn-outline-dark px-4 py-2 rounded-pill fw-semibold"
+							>
+								<i class="bi bi-box-arrow-up-right me-2"></i>
+								View Bulma Card Component
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+							<h6
+								class="text-uppercase text-muted fw-bold mb-3 small tracking-wider"
+							>
+								<i class="bi bi-info-circle-fill text-primary me-1"></i>
+								Task Specifications
+							</h6>
+							<ul
+								class="list-unstyled mb-0 d-flex flex-column gap-2 small"
+							>
+								<li class="d-flex align-items-start gap-2">
+									<i
+										class="bi bi-check-circle-fill text-success mt-1"
+									></i>
+									<span>
+										<strong>Responsive Grid:</strong>
+										1-col (Mobile), 2-col (Tablet), 3-col (Desktop),
+										4-col (Wide).
+									</span>
+								</li>
+								<li class="d-flex align-items-start gap-2">
+									<i
+										class="bi bi-check-circle-fill text-success mt-1"
+									></i>
+									<span>
+										<strong>Card Component:</strong>
+										High-res imagery, badges, dynamic metadata, and
+										action triggers.
+									</span>
+								</li>
+								<li class="d-flex align-items-start gap-2">
+									<i
+										class="bi bi-check-circle-fill text-success mt-1"
+									></i>
+									<span>
+										<strong>Framework Flexibility:</strong>
+										Bootstrap 12-column grid + Bulma column system.
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <!-- Hero Header -->
-  <header class="framework-hero py-5 border-bottom">
-    <div class="container py-3">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-8">
-          <div class="d-flex flex-wrap gap-2 mb-3">
-            <span class="badge bg-dark">Level 2 &bull; Task 1</span>
-            <span class="badge badge-bootstrap"><i class="bi bi-bootstrap-fill me-1"></i> Bootstrap 5.3</span>
-            <span class="badge badge-bulma"><i class="bi bi-palette-fill me-1"></i> Bulma 1.0</span>
-          </div>
-          <h1 class="display-5 fw-extrabold text-dark tracking-tight mb-3">
-            Front-end Frameworks: <span class="brand-gradient">Responsive Grid & Cards</span>
-          </h1>
-          <p class="lead text-secondary mb-4">
-            Demonstrating a fluid, multi-tier responsive grid system using <strong>Bootstrap</strong> and responsive card components styled with rich media, headers, and metadata.
-          </p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#grid-section" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold shadow-sm">
-              <i class="bi bi-arrow-down-circle me-2"></i>Explore Grid Layout
-            </a>
-            <a href="bulma.html" class="btn btn-outline-dark px-4 py-2 rounded-pill fw-semibold">
-              <i class="bi bi-box-arrow-up-right me-2"></i>View Bulma Card Component
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
-            <h6 class="text-uppercase text-muted fw-bold mb-3 small tracking-wider">
-              <i class="bi bi-info-circle-fill text-primary me-1"></i> Task Specifications
-            </h6>
-            <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-              <li class="d-flex align-items-start gap-2">
-                <i class="bi bi-check-circle-fill text-success mt-1"></i>
-                <span><strong>Responsive Grid:</strong> 1-col (Mobile), 2-col (Tablet), 3-col (Desktop), 4-col (Wide).</span>
-              </li>
-              <li class="d-flex align-items-start gap-2">
-                <i class="bi bi-check-circle-fill text-success mt-1"></i>
-                <span><strong>Card Component:</strong> High-res imagery, badges, dynamic metadata, and action triggers.</span>
-              </li>
-              <li class="d-flex align-items-start gap-2">
-                <i class="bi bi-check-circle-fill text-success mt-1"></i>
-                <span><strong>Framework Flexibility:</strong> Bootstrap 12-column grid + Bulma column system.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+		<main id="grid-section" class="container py-5">
+			<div
+				class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4 pb-2 border-bottom"
+			>
+				<div>
+					<h2 class="h3 fw-bold text-dark mb-1">
+						<i class="bi bi-grid-fill text-primary me-2"></i>
+						Responsive Grid Showcase
+					</h2>
+					<p class="text-muted mb-0">
+						Resize your browser window to observe how the layout smoothly
+						adapts across breakpoints.
+					</p>
+				</div>
+				<div class="d-flex align-items-center gap-2">
+					<span class="grid-spec-pill">
+						col-12 col-sm-6 col-lg-4 col-xl-3
+					</span>
+				</div>
+			</div>
 
-  <!-- Main Content: Bootstrap Responsive Grid Showcase -->
-  <main id="grid-section" class="container py-5">
-    
-    <!-- Section Title & Grid Info -->
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4 pb-2 border-bottom">
-      <div>
-        <h2 class="h3 fw-bold text-dark mb-1">
-          <i class="bi bi-grid-fill text-primary me-2"></i>Responsive Grid Showcase
-        </h2>
-        <p class="text-muted mb-0">
-          Resize your browser window to observe how the layout smoothly adapts across breakpoints.
-        </p>
-      </div>
-      <div class="d-flex align-items-center gap-2">
-        <span class="grid-spec-pill">col-12 col-sm-6 col-lg-4 col-xl-3</span>
-      </div>
-    </div>
+			<!-- Responsive Card Grid -->
+			<div class="row g-4">
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+					<div
+						class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white"
+					>
+						<div class="card-img-wrapper">
+							<img
+								src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+								alt="Web Development"
+								loading="lazy"
+							/>
+							<span
+								class="badge bg-primary position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm"
+							>
+								Technology
+							</span>
+						</div>
+						<div class="card-body d-flex flex-column p-4">
+							<div
+								class="d-flex align-items-center gap-2 text-muted small mb-2"
+							>
+								<i class="bi bi-clock"></i>
+								5 min read &bull; Sep 2026
+							</div>
+							<h3 class="h5 card-title fw-bold text-dark mb-2">
+								Modern Front-end Architecture
+							</h3>
+							<p class="card-text text-secondary small flex-grow-1">
+								Explore how modern CSS frameworks such as Bootstrap and
+								Bulma accelerate prototyping and ensure responsive
+								layouts.
+							</p>
+							<div
+								class="pt-3 border-top d-flex align-items-center justify-content-between mt-2"
+							>
+								<div class="d-flex align-items-center gap-2">
+									<img
+										src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+										class="rounded-circle"
+										width="32"
+										height="32"
+										alt="Sarah Chen"
+									/>
+									<span class="small fw-semibold text-dark">
+										Sarah Chen
+									</span>
+								</div>
+								<button
+									class="btn btn-sm btn-outline-primary rounded-pill px-3"
+									aria-label="Read modern front-end architecture"
+								>
+									Read
+									<i class="bi bi-arrow-right ms-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    <!-- Responsive Card Grid -->
-    <div class="row g-4">
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+					<div
+						class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white"
+					>
+						<div class="card-img-wrapper">
+							<img
+								src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+								alt="Data Intelligence"
+								loading="lazy"
+							/>
+							<span
+								class="badge bg-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm"
+							>
+								Analytics
+							</span>
+						</div>
+						<div class="card-body d-flex flex-column p-4">
+							<div
+								class="d-flex align-items-center gap-2 text-muted small mb-2"
+							>
+								<i class="bi bi-clock"></i>
+								4 min read &bull; Sep 2026
+							</div>
+							<h3 class="h5 card-title fw-bold text-dark mb-2">
+								Data Meets Intelligence
+							</h3>
+							<p class="card-text text-secondary small flex-grow-1">
+								Unlocking business insights with predictive modeling,
+								real-time analytics, and automated decision-making
+								engines.
+							</p>
+							<div
+								class="pt-3 border-top d-flex align-items-center justify-content-between mt-2"
+							>
+								<div class="d-flex align-items-center gap-2">
+									<img
+										src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+										class="rounded-circle"
+										width="32"
+										height="32"
+										alt="Alex Rivera"
+									/>
+									<span class="small fw-semibold text-dark">
+										Alex Rivera
+									</span>
+								</div>
+								<button
+									class="btn btn-sm btn-outline-primary rounded-pill px-3"
+									aria-label="Read data meets intelligence"
+								>
+									Read
+									<i class="bi bi-arrow-right ms-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-      <!-- Card 1 -->
-      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Development" loading="lazy">
-            <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm">
-              Technology
-            </span>
-          </div>
-          <div class="card-body d-flex flex-column p-4">
-            <div class="d-flex align-items-center gap-2 text-muted small mb-2">
-              <i class="bi bi-clock"></i> 5 min read &bull; Sep 2026
-            </div>
-            <h3 class="h5 card-title fw-bold text-dark mb-2">
-              Modern Front-end Architecture
-            </h3>
-            <p class="card-text text-secondary small flex-grow-1">
-              Explore how modern CSS frameworks such as Bootstrap and Bulma accelerate prototyping and ensure responsive layouts.
-            </p>
-            <div class="pt-3 border-top d-flex align-items-center justify-content-between mt-2">
-              <div class="d-flex align-items-center gap-2">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" class="rounded-circle" width="32" height="32" alt="Sarah Chen">
-                <span class="small fw-semibold text-dark">Sarah Chen</span>
-              </div>
-              <button class="btn btn-sm btn-outline-primary rounded-pill px-3" aria-label="Read modern front-end architecture">
-                Read <i class="bi bi-arrow-right ms-1"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+					<div
+						class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white"
+					>
+						<div class="card-img-wrapper">
+							<img
+								src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80"
+								alt="Responsive UI Design"
+								loading="lazy"
+							/>
+							<span
+								class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm"
+							>
+								UI / UX
+							</span>
+						</div>
+						<div class="card-body d-flex flex-column p-4">
+							<div
+								class="d-flex align-items-center gap-2 text-muted small mb-2"
+							>
+								<i class="bi bi-clock"></i>
+								6 min read &bull; Sep 2026
+							</div>
+							<h3 class="h5 card-title fw-bold text-dark mb-2">
+								Responsive Grid Principles
+							</h3>
+							<p class="card-text text-secondary small flex-grow-1">
+								Mastering fluid breakpoints, flexbox alignment, and CSS
+								grid constraints to produce pristine user interfaces.
+							</p>
+							<div
+								class="pt-3 border-top d-flex align-items-center justify-content-between mt-2"
+							>
+								<div class="d-flex align-items-center gap-2">
+									<img
+										src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
+										class="rounded-circle"
+										width="32"
+										height="32"
+										alt="Elena Rostova"
+									/>
+									<span class="small fw-semibold text-dark">
+										Elena Rostova
+									</span>
+								</div>
+								<button
+									class="btn btn-sm btn-outline-primary rounded-pill px-3"
+									aria-label="Read responsive grid principles"
+								>
+									Read
+									<i class="bi bi-arrow-right ms-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-      <!-- Card 2 -->
-      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data Intelligence" loading="lazy">
-            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm">
-              Analytics
-            </span>
-          </div>
-          <div class="card-body d-flex flex-column p-4">
-            <div class="d-flex align-items-center gap-2 text-muted small mb-2">
-              <i class="bi bi-clock"></i> 4 min read &bull; Sep 2026
-            </div>
-            <h3 class="h5 card-title fw-bold text-dark mb-2">
-              Data Meets Intelligence
-            </h3>
-            <p class="card-text text-secondary small flex-grow-1">
-              Unlocking business insights with predictive modeling, real-time analytics, and automated decision-making engines.
-            </p>
-            <div class="pt-3 border-top d-flex align-items-center justify-content-between mt-2">
-              <div class="d-flex align-items-center gap-2">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" class="rounded-circle" width="32" height="32" alt="Alex Rivera">
-                <span class="small fw-semibold text-dark">Alex Rivera</span>
-              </div>
-              <button class="btn btn-sm btn-outline-primary rounded-pill px-3" aria-label="Read data meets intelligence">
-                Read <i class="bi bi-arrow-right ms-1"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+					<div
+						class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white"
+					>
+						<div class="card-img-wrapper">
+							<img
+								src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+								alt="Cloud Scalability"
+								loading="lazy"
+							/>
+							<span
+								class="badge bg-info text-dark position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm"
+							>
+								Cloud
+							</span>
+						</div>
+						<div class="card-body d-flex flex-column p-4">
+							<div
+								class="d-flex align-items-center gap-2 text-muted small mb-2"
+							>
+								<i class="bi bi-clock"></i>
+								8 min read &bull; Sep 2026
+							</div>
+							<h3 class="h5 card-title fw-bold text-dark mb-2">
+								Scalable Cloud Systems
+							</h3>
+							<p class="card-text text-secondary small flex-grow-1">
+								Constructing elastic web services with distributed
+								microservices, containerization, and automated CI/CD
+								pipelines.
+							</p>
+							<div
+								class="pt-3 border-top d-flex align-items-center justify-content-between mt-2"
+							>
+								<div class="d-flex align-items-center gap-2">
+									<img
+										src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+										class="rounded-circle"
+										width="32"
+										height="32"
+										alt="David Kim"
+									/>
+									<span class="small fw-semibold text-dark">
+										David Kim
+									</span>
+								</div>
+								<button
+									class="btn btn-sm btn-outline-primary rounded-pill px-3"
+									aria-label="Read scalable cloud systems"
+								>
+									Read
+									<i class="bi bi-arrow-right ms-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <!-- Card 3 -->
-      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Responsive UI Design" loading="lazy">
-            <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm">
-              UI / UX
-            </span>
-          </div>
-          <div class="card-body d-flex flex-column p-4">
-            <div class="d-flex align-items-center gap-2 text-muted small mb-2">
-              <i class="bi bi-clock"></i> 6 min read &bull; Sep 2026
-            </div>
-            <h3 class="h5 card-title fw-bold text-dark mb-2">
-              Responsive Grid Principles
-            </h3>
-            <p class="card-text text-secondary small flex-grow-1">
-              Mastering fluid breakpoints, flexbox alignment, and CSS grid constraints to produce pristine user interfaces.
-            </p>
-            <div class="pt-3 border-top d-flex align-items-center justify-content-between mt-2">
-              <div class="d-flex align-items-center gap-2">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" class="rounded-circle" width="32" height="32" alt="Elena Rostova">
-                <span class="small fw-semibold text-dark">Elena Rostova</span>
-              </div>
-              <button class="btn btn-sm btn-outline-primary rounded-pill px-3" aria-label="Read responsive grid principles">
-                Read <i class="bi bi-arrow-right ms-1"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+			<div class="mt-5 pt-4">
+				<div
+					class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4 pb-2 border-bottom"
+				>
+					<div>
+						<h3 class="h4 fw-bold text-dark mb-1">
+							<i class="bi bi-layout-split text-info me-2"></i>
+							Multi-Column Span Example
+						</h3>
+						<p class="text-muted mb-0">
+							Bootstrap grid easily allows varied column spans (e.g.
+							8-column featured card + 4-column highlight).
+						</p>
+					</div>
+					<span class="grid-spec-pill">col-lg-8 &amp; col-lg-4</span>
+				</div>
 
-      <!-- Card 4 -->
-      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Scalability" loading="lazy">
-            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3 px-2 py-1 rounded-pill shadow-sm">
-              Cloud
-            </span>
-          </div>
-          <div class="card-body d-flex flex-column p-4">
-            <div class="d-flex align-items-center gap-2 text-muted small mb-2">
-              <i class="bi bi-clock"></i> 8 min read &bull; Sep 2026
-            </div>
-            <h3 class="h5 card-title fw-bold text-dark mb-2">
-              Scalable Cloud Systems
-            </h3>
-            <p class="card-text text-secondary small flex-grow-1">
-              Constructing elastic web services with distributed microservices, containerization, and automated CI/CD pipelines.
-            </p>
-            <div class="pt-3 border-top d-flex align-items-center justify-content-between mt-2">
-              <div class="d-flex align-items-center gap-2">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" class="rounded-circle" width="32" height="32" alt="David Kim">
-                <span class="small fw-semibold text-dark">David Kim</span>
-              </div>
-              <button class="btn btn-sm btn-outline-primary rounded-pill px-3" aria-label="Read scalable cloud systems">
-                Read <i class="bi bi-arrow-right ms-1"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+				<div class="row g-4">
+					<div class="col-12 col-lg-8">
+						<div
+							class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white overflow-hidden"
+						>
+							<div class="row g-0 h-100">
+								<div class="col-md-5">
+									<img
+										src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
+										class="img-fluid h-100 w-100 object-fit-cover"
+										alt="Product Management"
+										style="min-height: 240px"
+									/>
+								</div>
+								<div class="col-md-7 d-flex flex-column p-4">
+									<span
+										class="badge bg-danger align-self-start mb-2 rounded-pill"
+									>
+										Featured Project
+									</span>
+									<h4 class="h5 fw-bold text-dark mb-2">
+										Interactive Dashboard Framework
+									</h4>
+									<p class="text-secondary small mb-3">
+										This card spans 8 columns on large viewports and
+										automatically stacks vertically into a 12-column
+										layout on mobile devices.
+									</p>
+									<div
+										class="mt-auto d-flex justify-content-between align-items-center"
+									>
+										<span class="text-muted small">
+											<i class="bi bi-calendar3 me-1"></i>
+											Fall 2026 Batch
+										</span>
+										<a
+											href="bulma.html"
+											class="btn btn-outline-dark btn-sm rounded-pill px-3"
+										>
+											View Bulma Version
+											<i class="bi bi-arrow-right ms-1"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-    </div>
+					<div class="col-12 col-lg-4">
+						<div
+							class="card h-100 border-0 rounded-4 shadow-sm p-4 bg-primary text-white d-flex flex-column justify-content-between"
+						>
+							<div>
+								<div
+									class="d-flex align-items-center justify-content-between mb-3"
+								>
+									<span
+										class="badge bg-white text-primary rounded-pill px-3 py-2 fw-bold"
+									>
+										Part 2 of Task
+									</span>
+									<i class="bi bi-check-all fs-4"></i>
+								</div>
+								<h4 class="h5 fw-bold text-white mb-2">
+									Bulma Card Component
+								</h4>
+								<p class="small text-white-50">
+									The task also requires using a framework like
+									<strong>Bulma</strong>
+									or
+									<strong>UIKit</strong>
+									to build responsive card components with images and
+									text.
+								</p>
+							</div>
+							<div
+								class="mt-4 pt-3 border-top border-white border-opacity-25"
+							>
+								<a
+									href="bulma.html"
+									class="btn btn-light text-primary fw-bold w-100 rounded-pill shadow-sm"
+								>
+									Open Bulma Card Demo
+									<i class="bi bi-box-arrow-up-right ms-1"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-    <!-- Secondary Row: Asymmetric Grid Layout Example -->
-    <div class="mt-5 pt-4">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4 pb-2 border-bottom">
-        <div>
-          <h3 class="h4 fw-bold text-dark mb-1">
-            <i class="bi bi-layout-split text-info me-2"></i>Multi-Column Span Example
-          </h3>
-          <p class="text-muted mb-0">
-            Bootstrap grid easily allows varied column spans (e.g. 8-column featured card + 4-column highlight).
-          </p>
-        </div>
-        <span class="grid-spec-pill">col-lg-8 &amp; col-lg-4</span>
-      </div>
+		<!-- Footer -->
+		<footer
+			class="bg-dark text-white-50 py-4 border-top border-secondary border-opacity-25 mt-5"
+		>
+			<div
+				class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+			>
+				<div class="d-flex align-items-center gap-2">
+					<span class="fw-bold text-white">Cognifyz Technologies</span>
+					<span>&bull;</span>
+					<span>Internship Program - Level 2 Task 1</span>
+				</div>
+				<div class="d-flex gap-3 small">
+					<a href="index.html" class="text-white-50 text-decoration-none">
+						Bootstrap Grid
+					</a>
+					<a href="bulma.html" class="text-white-50 text-decoration-none">
+						Bulma Cards
+					</a>
+				</div>
+			</div>
+		</footer>
 
-      <div class="row g-4">
-        <!-- 8-column Featured Card -->
-        <div class="col-12 col-lg-8">
-          <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift bg-white overflow-hidden">
-            <div class="row g-0 h-100">
-              <div class="col-md-5">
-                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" class="img-fluid h-100 w-100 object-fit-cover" alt="Product Management" style="min-height: 240px;">
-              </div>
-              <div class="col-md-7 d-flex flex-column p-4">
-                <span class="badge bg-danger align-self-start mb-2 rounded-pill">Featured Project</span>
-                <h4 class="h5 fw-bold text-dark mb-2">Interactive Dashboard Framework</h4>
-                <p class="text-secondary small mb-3">
-                  This card spans 8 columns on large viewports and automatically stacks vertically into a 12-column layout on mobile devices.
-                </p>
-                <div class="mt-auto d-flex justify-content-between align-items-center">
-                  <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> Fall 2026 Batch</span>
-                  <a href="bulma.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">
-                    View Bulma Version <i class="bi bi-arrow-right ms-1"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4-column Quick Stats / Callout Card -->
-        <div class="col-12 col-lg-4">
-          <div class="card h-100 border-0 rounded-4 shadow-sm p-4 bg-primary text-white d-flex flex-column justify-content-between">
-            <div>
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <span class="badge bg-white text-primary rounded-pill px-3 py-2 fw-bold">Part 2 of Task</span>
-                <i class="bi bi-check-all fs-4"></i>
-              </div>
-              <h4 class="h5 fw-bold text-white mb-2">Bulma Card Component</h4>
-              <p class="small text-white-50">
-                The task also requires using a framework like <strong>Bulma</strong> or <strong>UIKit</strong> to build responsive card components with images and text.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-top border-white border-opacity-25">
-              <a href="bulma.html" class="btn btn-light text-primary fw-bold w-100 rounded-pill shadow-sm">
-                Open Bulma Card Demo <i class="bi bi-box-arrow-up-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white-50 py-4 border-top border-secondary border-opacity-25 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      <div class="d-flex align-items-center gap-2">
-        <span class="fw-bold text-white">Cognifyz Technologies</span>
-        <span>&bull;</span>
-        <span>Internship Program - Level 2 Task 1</span>
-      </div>
-      <div class="d-flex gap-3 small">
-        <a href="index.html" class="text-white-50 text-decoration-none">Bootstrap Grid</a>
-        <a href="bulma.html" class="text-white-50 text-decoration-none">Bulma Cards</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap 5 Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+		<!-- Bootstrap 5 Bundle JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
