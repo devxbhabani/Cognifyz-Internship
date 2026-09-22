@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognifyz - Level 2 Task 1 | Bulma Responsive Card Components</title>
+  <!-- Bulma 1.0 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-wrapper {
+      flex: 1 0 auto;
+    }
+    .bulma-badge-pill {
+      background-color: #00d1b2;
+      color: white;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-wrapper">
+    <!-- Bulma Navbar -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-weight-bold is-size-5" href="bulma.html">
+            <span class="tag is-primary mr-2 has-text-weight-bold">L2</span>
+            Cognifyz <span class="has-text-info ml-1">Technologies</span>
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="bulmaNavbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="bulmaNavbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">
+              <span class="icon mr-1"><i class="fa-solid fa-table-cells"></i></span>
+              Bootstrap Grid Layout
+            </a>
+            <a class="navbar-item is-active" href="bulma.html">
+              <span class="icon mr-1"><i class="fa-solid fa-id-card"></i></span>
+              Bulma Responsive Cards
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a href="index.html" class="button is-info is-outlined is-rounded is-small">
+                <span class="icon"><i class="fa-solid fa-arrow-left"></i></span>
+                <span>Switch to Bootstrap Grid</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <section class="hero is-info is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="tags are-medium mb-2">
+            <span class="tag is-dark">Level 2 &bull; Task 1</span>
+            <span class="tag is-primary has-text-weight-semibold">Bulma Framework</span>
+          </div>
+          <h1 class="title is-2 has-text-weight-extrabold">
+            Responsive Card Components
+          </h1>
+          <p class="subtitle is-5">
+            Built using Bulma's semantic card modules: <code>card-image</code>, <code>card-content</code>, <code>media</code>, and <code>card-footer</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="section">
+      <div class="container">
+        
+        <!-- Header Info -->
+        <div class="level mb-5 pb-3 is-mobile" style="border-bottom: 1px solid #e2e8f0;">
+          <div class="level-left">
+            <div class="level-item">
+              <div>
+                <h2 class="title is-4 mb-1 has-text-dark">
+                  <span class="icon has-text-primary mr-1"><i class="fa-solid fa-layer-group"></i></span>
+                  Bulma Card Showcase
+                </h2>
+                <p class="subtitle is-6 has-text-grey">
+                  Cards dynamically adapt between full-width on mobile, 2 columns on tablet, and 3 columns on desktop.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="level-right is-hidden-mobile">
+            <div class="level-item">
+              <span class="bulma-badge-pill">columns is-multiline</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bulma Responsive Columns Grid -->
+        <div class="columns is-multiline is-variable is-4">
+
+          <!-- Bulma Card 1 -->
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card bulma-custom-card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Full-stack development workspace" loading="lazy">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img class="is-rounded" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Sarah Chen avatar">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-5 mb-0">Sarah Chen</p>
+                    <p class="subtitle is-6 has-text-grey">@sarahchen</p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <p class="has-text-weight-bold is-size-5 mb-2">Modern Web Design with Bulma</p>
+                  <p class="is-size-6 has-text-grey-dark">
+                    Bulma provides 100% CSS flexbox-based components that work seamlessly out of the box with zero JavaScript dependency.
+                  </p>
+                  <div class="tags">
+                    <span class="tag is-primary is-light">CSS Framework</span>
+                    <span class="tag is-info is-light">Flexbox</span>
+                    <span class="tag is-success is-light">UI/UX</span>
+                  </div>
+                  <time class="is-size-7 has-text-grey" datetime="2026-09-22">Published: 11:30 PM &bull; Sep 2026</time>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item has-text-link">
+                  <span class="icon mr-1"><i class="fa-solid fa-arrow-up-right-from-square"></i></span> View
+                </a>
+                <a href="#" class="card-footer-item has-text-grey">
+                  <span class="icon mr-1"><i class="fa-regular fa-bookmark"></i></span> Save
+                </a>
+                <a href="#" class="card-footer-item has-text-danger">
+                  <span class="icon mr-1"><i class="fa-regular fa-heart"></i></span> 142
+                </a>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Bulma Card 2 -->
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card bulma-custom-card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Data Intelligence & AI" loading="lazy">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img class="is-rounded" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Alex Rivera avatar">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-5 mb-0">Alex Rivera</p>
+                    <p class="subtitle is-6 has-text-grey">@alex_ai</p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <p class="has-text-weight-bold is-size-5 mb-2">Cognitive Intelligence Engines</p>
+                  <p class="is-size-6 has-text-grey-dark">
+                    Integrating neural predictive pipelines to automatically generate real-time metrics and enhance business decision making.
+                  </p>
+                  <div class="tags">
+                    <span class="tag is-warning is-light">Machine Learning</span>
+                    <span class="tag is-danger is-light">Data Science</span>
+                  </div>
+                  <time class="is-size-7 has-text-grey" datetime="2026-09-22">Published: 08:15 PM &bull; Sep 2026</time>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item has-text-link">
+                  <span class="icon mr-1"><i class="fa-solid fa-arrow-up-right-from-square"></i></span> View
+                </a>
+                <a href="#" class="card-footer-item has-text-grey">
+                  <span class="icon mr-1"><i class="fa-regular fa-bookmark"></i></span> Save
+                </a>
+                <a href="#" class="card-footer-item has-text-danger">
+                  <span class="icon mr-1"><i class="fa-regular fa-heart"></i></span> 289
+                </a>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Bulma Card 3 -->
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card bulma-custom-card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Business Growth and Charts" loading="lazy">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img class="is-rounded" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova avatar">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-5 mb-0">Elena Rostova</p>
+                    <p class="subtitle is-6 has-text-grey">@elena_growth</p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <p class="has-text-weight-bold is-size-5 mb-2">Performance Analytics & KPIs</p>
+                  <p class="is-size-6 has-text-grey-dark">
+                    Tracking conversion benchmarks and customer engagement trends to maximize retention and platform scalability.
+                  </p>
+                  <div class="tags">
+                    <span class="tag is-success is-light">Analytics</span>
+                    <span class="tag is-link is-light">Growth</span>
+                  </div>
+                  <time class="is-size-7 has-text-grey" datetime="2026-09-22">Published: 03:40 PM &bull; Sep 2026</time>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item has-text-link">
+                  <span class="icon mr-1"><i class="fa-solid fa-arrow-up-right-from-square"></i></span> View
+                </a>
+                <a href="#" class="card-footer-item has-text-grey">
+                  <span class="icon mr-1"><i class="fa-regular fa-bookmark"></i></span> Save
+                </a>
+                <a href="#" class="card-footer-item has-text-danger">
+                  <span class="icon mr-1"><i class="fa-regular fa-heart"></i></span> 176
+                </a>
+              </footer>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Framework Feature Comparison Card -->
+        <div class="box mt-6 p-5 has-background-white" style="border-radius: 12px; border: 1px solid #e2e8f0;">
+          <div class="columns is-vcentered">
+            <div class="column is-8">
+              <h3 class="title is-4 has-text-dark mb-2">
+                <span class="icon has-text-info mr-2"><i class="fa-solid fa-circle-check"></i></span>
+                Framework Requirement Highlights
+              </h3>
+              <p class="has-text-grey-dark">
+                This project satisfies both prompts for Level 2 Task 1:
+                <strong>Bulma Card Component</strong> (with image, header, media, text, tags, and action footer) and 
+                <strong>Bootstrap Responsive Grid Layout</strong> (multi-tier 12-column breakpoints).
+              </p>
+            </div>
+            <div class="column is-4 has-text-centered-mobile has-text-right-tablet">
+              <a href="index.html" class="button is-dark is-rounded is-medium">
+                <span>View Bootstrap Grid</span>
+                <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer py-5 has-background-dark has-text-white-ter">
+    <div class="content has-text-centered">
+      <p>
+        <strong class="has-text-white">Cognifyz Internship</strong> &bull; Level 2 Task 1: Front-end Frameworks.
+      </p>
+      <p class="is-size-7 has-text-grey-light">
+        Demonstrating Bulma Card Component and Bootstrap Responsive Grid Layout.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Bulma Navbar Burger Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
