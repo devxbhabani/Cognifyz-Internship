@@ -11,19 +11,19 @@ Welcome to the central repository for the **Web Development Internship** at **Co
 
 ---
 
-## 📌 Repository Overview
+## Repository Overview
 
 This repository is structured into distinct progressive levels designed to master modern front-end web engineering, UI/UX principles, and responsive web frameworks:
 
-| Level | Focus Area | Status | Key Highlights |
-| :--- | :--- | :---: | :--- |
-| **Level 1** | **Web Fundamentals** | ✅ Completed | Semantic HTML5, CSS layout & styling, DOM manipulation, JS events & calculations |
+| Level       | Focus Area                               |     Status     | Key Highlights                                                                         |
+| :---------- | :--------------------------------------- | :------------: | :------------------------------------------------------------------------------------- |
+| **Level 1** | **Web Fundamentals**                     |  ✅ Completed  | Semantic HTML5, CSS layout & styling, DOM manipulation, JS events & calculations       |
 | **Level 2** | **Front-End Frameworks & Responsive UI** | 🔄 In Progress | Bootstrap 5 12-column grid, Bulma card components, responsive multi-breakpoint layouts |
-| **Level 3** | **Advanced Web Concepts** | ⏳ Upcoming | Dynamic web applications, complex UI integrations, and project enhancements |
+| **Level 3** | **Advanced Web Concepts**                |  ⏳ Upcoming   | Dynamic web applications, complex UI integrations, and project enhancements            |
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```text
 Cognifyz-Internship/
@@ -58,19 +58,21 @@ Cognifyz-Internship/
 ### 🔹 Level 1: Web Development Fundamentals
 
 #### **Task 1: Basic Webpage & Subscription Form Layout**
+
 - **Objective**: Construct a clean, accessible, semantic web layout featuring navigation, content hierarchy, and user input elements.
 - **Key Features**:
-  - **Header & Navigation**: Fixed container width with branded header (`Cognifyz`) and accessible navigation links.
-  - **Hero Section**: Two-column responsive hero banner combining visual imagery with structured typography.
-  - **Call to Action Form**: Email subscription form with styled input focus states and dynamic button hover interactions.
+   - **Header & Navigation**: Fixed container width with branded header (`Cognifyz`) and accessible navigation links.
+   - **Hero Section**: Two-column responsive hero banner combining visual imagery with structured typography.
+   - **Call to Action Form**: Email subscription form with styled input focus states and dynamic button hover interactions.
 - **Technologies**: Semantic HTML5, Vanilla CSS3 (Flexbox, Box Model, Media Queries).
 
 #### **Task 2: Interactive JavaScript Lab**
+
 - **Objective**: Develop practical client-side interactivity using event handlers, conditional logic, and form processing.
 - **Key Features**:
-  1. **Color Switcher**: Interactive button dynamically toggles through an array of curated color palettes (`#f06b4f`, `#e6a23c`, `#4c9f70`, `#4f79c7`) upon user clicks.
-  2. **Time-Based Greeting**: Uses JavaScript `Date().getHours()` to dynamically generate contextual greetings (*"Good morning!"*, *"Good afternoon!"*, or *"Good evening!"*) displayed via alert notifications.
-  3. **Addition Calculator**: Client-side arithmetic utility that validates numeric input, suppresses standard page reload using `event.preventDefault()`, and computes results displayed dynamically in real time.
+   1. **Color Switcher**: Interactive button dynamically toggles through an array of curated color palettes (`#f06b4f`, `#e6a23c`, `#4c9f70`, `#4f79c7`) upon user clicks.
+   2. **Time-Based Greeting**: Uses JavaScript `Date().getHours()` to dynamically generate contextual greetings (_"Good morning!"_, _"Good afternoon!"_, or _"Good evening!"_) displayed via alert notifications.
+   3. **Addition Calculator**: Client-side arithmetic utility that validates numeric input, suppresses standard page reload using `event.preventDefault()`, and computes results displayed dynamically in real time.
 - **Technologies**: Vanilla JavaScript (ES6+), DOM Manipulation, Event Listeners, CSS Grid.
 
 ---
@@ -78,38 +80,41 @@ Cognifyz-Internship/
 ### 🔹 Level 2: Front-End Frameworks & Responsive UI
 
 #### **Task 1: Bootstrap 5 & Bulma Showcases**
+
 - **Objective**: Master industry-standard front-end CSS frameworks to construct cross-device responsive layouts and modular UI components.
 - **Implementations**:
-  1. **Bootstrap 5 Responsive Grid (`index.html`)**:
-     - **12-Column Responsive Grid Architecture**: Smooth breakpoint transitions across Mobile (`col-12`), Tablet (`col-sm-6`), Desktop (`col-lg-4`), and Wide Screens (`col-xl-3`).
-     - **Asymmetric Grid Spans**: Demonstrates complex layout hierarchy with an 8-column featured card paired with a 4-column sidebar callout.
-     - **Live Breakpoint Indicator**: Real-time visual badge in the navigation bar indicating the active viewport tier (`XS`, `SM`, `MD`, `LG`, `XL`, `XXL`).
-     - **Component Integration**: Bootstrap navigation bars, badges, icon sets, button groups, and metric counters.
-  2. **Bulma Responsive Card Components (`bulma.html`)**:
-     - **Semantic Component Hierarchy**: Utilizes `card`, `card-image` with responsive 4:3 aspect ratio (`image is-4by3`), `media` blocks (author avatars, title, subtitles), and `content` tags.
-     - **Interactive Card Footers**: Actionable links and metrics (`card-footer-item`) with hover feedback.
-     - **Responsive Columns**: Bulma's `columns is-multiline` configured with `is-12-mobile`, `is-6-tablet`, and `is-4-desktop`.
+   1. **Bootstrap 5 Responsive Grid (`index.html`)**:
+      - **12-Column Responsive Grid Architecture**: Smooth breakpoint transitions across Mobile (`col-12`), Tablet (`col-sm-6`), Desktop (`col-lg-4`), and Wide Screens (`col-xl-3`).
+      - **Asymmetric Grid Spans**: Demonstrates complex layout hierarchy with an 8-column featured card paired with a 4-column sidebar callout.
+      - **Live Breakpoint Indicator**: Real-time visual badge in the navigation bar indicating the active viewport tier (`XS`, `SM`, `MD`, `LG`, `XL`, `XXL`).
+      - **Component Integration**: Bootstrap navigation bars, badges, icon sets, button groups, and metric counters.
+   2. **Bulma Responsive Card Components (`bulma.html`)**:
+      - **Semantic Component Hierarchy**: Utilizes `card`, `card-image` with responsive 4:3 aspect ratio (`image is-4by3`), `media` blocks (author avatars, title, subtitles), and `content` tags.
+      - **Interactive Card Footers**: Actionable links and metrics (`card-footer-item`) with hover feedback.
+      - **Responsive Columns**: Bulma's `columns is-multiline` configured with `is-12-mobile`, `is-6-tablet`, and `is-4-desktop`.
 - **Technologies**: Bootstrap 5.3.3, Bulma 1.0.2, Font Awesome 6, Bootstrap Icons, Custom CSS3.
 
 #### **Task 2: (In Progress)**
-- *Work in progress — upcoming responsive and UI components.*
+
+- _Work in progress — upcoming responsive and UI components._
 
 ---
 
 ### 🔹 Level 3: Advanced Full Stack Concepts (Upcoming)
+
 - Advanced interactive applications, API integrations, and progressive web capabilities.
 
 ---
 
 ## 🛠️ Technologies & Tools
 
-| Category | Tools / Technologies |
-| :--- | :--- |
-| **Core Languages** | HTML5, CSS3, JavaScript (ES6+) |
-| **CSS Frameworks** | Bootstrap 5.3.3, Bulma 1.0.2 |
-| **Icon Libraries** | Bootstrap Icons, Font Awesome 6 |
+| Category              | Tools / Technologies                                                                 |
+| :-------------------- | :----------------------------------------------------------------------------------- |
+| **Core Languages**    | HTML5, CSS3, JavaScript (ES6+)                                                       |
+| **CSS Frameworks**    | Bootstrap 5.3.3, Bulma 1.0.2                                                         |
+| **Icon Libraries**    | Bootstrap Icons, Font Awesome 6                                                      |
 | **Design Principles** | Responsive Web Design (RWD), Mobile-First, Flexbox & CSS Grid, BEM / Semantic naming |
-| **Version Control** | Git & GitHub |
+| **Version Control**   | Git & GitHub                                                                         |
 
 ---
 
@@ -118,6 +123,7 @@ Cognifyz-Internship/
 No complex build steps or package installations are required! All tasks run natively in any modern web browser.
 
 ### Option 1: Direct File Preview
+
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/<your-username>/Cognifyz-Internship.git
@@ -126,6 +132,7 @@ No complex build steps or package installations are required! All tasks run nati
 3. Double-click `index.html` or `bulma.html` to open it in your default browser (Google Chrome, Microsoft Edge, Mozilla Firefox, Safari).
 
 ### Option 2: Using VS Code Live Server
+
 1. Open the repository in **Visual Studio Code**.
 2. Install the **Live Server** extension (by Ritwick Dey).
 3. Right-click on any `index.html` file and select **"Open with Live Server"**.
