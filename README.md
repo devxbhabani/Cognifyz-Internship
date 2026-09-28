@@ -106,7 +106,7 @@ Cognifyz-Internship/
 
 ---
 
-## 🛠️ Technologies & Tools
+## Technologies & Tools
 
 | Category              | Tools / Technologies                                                                 |
 | :-------------------- | :----------------------------------------------------------------------------------- |
