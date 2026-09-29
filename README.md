@@ -53,9 +53,9 @@ Cognifyz-Internship/
 
 ---
 
-## 🚀 Detailed Task Breakdown
+## Detailed Task Breakdown
 
-### 🔹 Level 1: Web Development Fundamentals
+### Level 1: Web Development Fundamentals
 
 #### **Task 1: Basic Webpage & Subscription Form Layout**
 
@@ -77,7 +77,7 @@ Cognifyz-Internship/
 
 ---
 
-### 🔹 Level 2: Front-End Frameworks & Responsive UI
+### Level 2: Front-End Frameworks & Responsive UI
 
 #### **Task 1: Bootstrap 5 & Bulma Showcases**
 
