@@ -100,7 +100,7 @@ Cognifyz-Internship/
 
 ---
 
-### 🔹 Level 3: Advanced Full Stack Concepts (Upcoming)
+### Level 3: Advanced Full Stack Concepts (Upcoming)
 
 - Advanced interactive applications, API integrations, and progressive web capabilities.
 
@@ -118,7 +118,7 @@ Cognifyz-Internship/
 
 ---
 
-## 💻 How to Run and View the Projects
+## How to Run and View the Projects
 
 No complex build steps or package installations are required! All tasks run natively in any modern web browser.
 
@@ -140,7 +140,7 @@ No complex build steps or package installations are required! All tasks run nati
 
 ---
 
-## 🎯 Key Learning Outcomes
+## Key Learning Outcomes
 
 - [x] Structuring semantic, accessible, and clean HTML documents.
 - [x] Crafting modern CSS layouts using Flexbox, CSS Grid, and custom CSS variables.
