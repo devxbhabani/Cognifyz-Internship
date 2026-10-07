@@ -76,10 +76,16 @@ When `.is-active` is applied to the button, CSS transforms turn the 3 bars into 
 }
 ```
 
-### 3. Drawer Overlay & Sliding Animation
-- On viewports `< 768px`, the mobile drawer is positioned offscreen using `transform: translateX(100%)`.
-- When opened, `transform: translateX(0)` slides the drawer into view, and `mobile-drawer-overlay` fades in with backdrop blur (`backdrop-filter: blur(4px)`).
-- Background body scrolling is locked via `.menu-open { overflow: hidden; }`.
+### 3. Main-Screen Dropdown & Collapse Animation
+- On viewports `< 768px`, the mobile navigation menu drops down smoothly directly on the main screen (`max-height`, `opacity`, `transform: translateY(0)`), covering the top section below the header.
+- A backdrop overlay (`mobile-menu-backdrop`) fades in covering the rest of the main screen with a subtle blur.
+- The menu can be collapsed by:
+  - Clicking the **hamburger/X button** in the navbar (which displays an animated **X** when open).
+  - Clicking the dedicated **Close ✕** button (`#mobileCloseBtn`) inside the menu.
+  - Clicking anywhere on the backdrop overlay on the main screen.
+  - Clicking any navigation link in the menu.
+  - Pressing the **Escape** key on the keyboard.
+- On desktop viewports (`≥ 768px`), the mobile menu, hamburger button, and backdrop overlay are strictly hidden (`display: none !important;`).
 
 ---
 

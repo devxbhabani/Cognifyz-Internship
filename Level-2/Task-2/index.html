@@ -64,8 +64,8 @@
                 <a href="#features" class="btn btn-outline nav-btn-secondary">Learn More</a>
                 <a href="#contact" class="btn btn-primary nav-btn-primary">Get In Touch</a>
                 
-                <!-- Mobile Hamburger Toggle Button -->
-                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+                <!-- Mobile Hamburger / X Toggle Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavMenu">
                     <span class="hamburger-bar bar-1"></span>
                     <span class="hamburger-bar bar-2"></span>
                     <span class="hamburger-bar bar-3"></span>
@@ -73,41 +73,33 @@
             </div>
         </nav>
 
-        <!-- Mobile Drawer Navigation Overlay & Menu -->
-        <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true"></div>
-        <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation Menu">
-            <div class="mobile-drawer-header">
-                <div class="logo-icon small">
-                    <i class="fa-solid fa-layer-group"></i>
+        <!-- Mobile Navigation Menu (Drops down directly onto the Main Screen below the header) -->
+        <nav class="mobile-nav-menu" id="mobileNavMenu" aria-label="Mobile Navigation Menu">
+            <div class="container mobile-menu-inner">
+                <div class="mobile-menu-topbar">
+                    <span class="status-pill"><i class="fa-solid fa-mobile-screen"></i> Mobile Navigation</span>
+                    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+                        <i class="fa-solid fa-xmark"></i> Close ✕
+                    </button>
                 </div>
-                <span class="mobile-drawer-title">Navigation Menu</span>
-                <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
 
-            <div class="mobile-drawer-status">
-                <span class="status-pill"><i class="fa-solid fa-mobile-screen"></i> Mobile View Active</span>
-            </div>
+                <ul class="mobile-nav-list">
+                    <li><a href="#hero" class="mobile-nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#breakpoints" class="mobile-nav-link"><i class="fa-solid fa-sliders"></i> Breakpoints &amp; Queries</a></li>
+                    <li><a href="#features" class="mobile-nav-link"><i class="fa-solid fa-cubes"></i> Responsive Features</a></li>
+                    <li><a href="#components" class="mobile-nav-link"><i class="fa-solid fa-shapes"></i> UI Components</a></li>
+                    <li><a href="#pricing" class="mobile-nav-link"><i class="fa-solid fa-layer-group"></i> Showcase Grid</a></li>
+                    <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+                </ul>
 
-            <ul class="mobile-nav-list">
-                <li><a href="#hero" class="mobile-nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="#breakpoints" class="mobile-nav-link"><i class="fa-solid fa-sliders"></i> Breakpoints &amp; Queries</a></li>
-                <li><a href="#features" class="mobile-nav-link"><i class="fa-solid fa-cubes"></i> Responsive Features</a></li>
-                <li><a href="#components" class="mobile-nav-link"><i class="fa-solid fa-shapes"></i> UI Components</a></li>
-                <li><a href="#pricing" class="mobile-nav-link"><i class="fa-solid fa-layer-group"></i> Showcase Grid</a></li>
-                <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
-            </ul>
-
-            <div class="mobile-drawer-footer">
-                <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
-                <div class="mobile-socials">
-                    <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <div class="mobile-menu-actions">
+                    <a href="#contact" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
                 </div>
             </div>
-        </aside>
+        </nav>
+
+        <!-- Backdrop overlay covering the rest of the main screen below the menu -->
+        <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
     </header>
 
     <main>

@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. DOM Elements Selection
     // ------------------------------------------------------------------------
     const hamburgerBtn = document.querySelector('#hamburgerBtn');
-    const mobileNavDrawer = document.querySelector('#mobileNavDrawer');
-    const mobileDrawerOverlay = document.querySelector('#mobileDrawerOverlay');
-    const drawerCloseBtn = document.querySelector('#drawerCloseBtn');
+    const mobileNavMenu = document.querySelector('#mobileNavMenu');
+    const mobileMenuBackdrop = document.querySelector('#mobileMenuBackdrop');
+    const mobileCloseBtn = document.querySelector('#mobileCloseBtn');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     const navbarHeader = document.querySelector('#navbarHeader');
     
@@ -31,29 +31,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const formNotification = document.querySelector('#formNotification');
 
     // ------------------------------------------------------------------------
-    // 2. Mobile Hamburger Drawer Logic (Toggle, Accessibility & Animations)
+    // 2. Mobile Navigation Menu Logic (Toggle, Accessibility & Animations)
     // ------------------------------------------------------------------------
     function openMobileMenu() {
+        if (!hamburgerBtn || !mobileNavMenu) return;
         hamburgerBtn.classList.add('is-active');
         hamburgerBtn.setAttribute('aria-expanded', 'true');
-        mobileNavDrawer.classList.add('is-open');
-        mobileDrawerOverlay.classList.add('is-open');
+        mobileNavMenu.classList.add('is-open');
+        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.add('is-open');
         document.body.classList.add('menu-open');
     }
 
     function closeMobileMenu() {
+        if (!hamburgerBtn || !mobileNavMenu) return;
         hamburgerBtn.classList.remove('is-active');
         hamburgerBtn.setAttribute('aria-expanded', 'false');
-        mobileNavDrawer.classList.remove('is-open');
-        mobileDrawerOverlay.classList.remove('is-open');
+        mobileNavMenu.classList.remove('is-open');
+        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('is-open');
         document.body.classList.remove('menu-open');
     }
 
-    // Toggle menu when clicking the hamburger button
+    // Toggle menu when clicking the hamburger / X button
     if (hamburgerBtn) {
-        hamburgerBtn.addEventListener('click', () => {
-            const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-            if (isExpanded) {
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = hamburgerBtn.classList.contains('is-active');
+            if (isOpen) {
                 closeMobileMenu();
             } else {
                 openMobileMenu();
@@ -61,37 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu when clicking the drawer close button
-    if (drawerCloseBtn) {
-        drawerCloseBtn.addEventListener('click', closeMobileMenu);
+    // Close menu when clicking the explicit close button ("Close ✕")
+    if (mobileCloseBtn) {
+        mobileCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
     }
 
-    // Close menu when clicking the backdrop overlay
-    if (mobileDrawerOverlay) {
-        mobileDrawerOverlay.addEventListener('click', closeMobileMenu);
+    // Close menu when clicking the backdrop overlay on the main screen
+    if (mobileMenuBackdrop) {
+        mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
     }
 
     // Close menu automatically when clicking any navigation link
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // Update active states
             mobileNavLinks.forEach(item => item.classList.remove('active'));
             link.classList.add('active');
             closeMobileMenu();
         });
     });
 
-    // Close menu with the Escape key for accessibility (a11y)
+    // Close menu with the Escape key for accessibility
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && mobileNavDrawer.classList.contains('is-open')) {
+        if (event.key === 'Escape' && mobileNavMenu && mobileNavMenu.classList.contains('is-open')) {
             closeMobileMenu();
-            hamburgerBtn.focus();
+            if (hamburgerBtn) hamburgerBtn.focus();
         }
     });
 
-    // Auto-close drawer if viewport resized beyond mobile breakpoint (≥ 768px)
+    // Auto-close menu if viewport resized beyond mobile breakpoint (≥ 768px)
     window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768 && mobileNavDrawer.classList.contains('is-open')) {
+        if (window.innerWidth >= 768 && mobileNavMenu && mobileNavMenu.classList.contains('is-open')) {
             closeMobileMenu();
         }
     });
