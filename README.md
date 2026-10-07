@@ -17,9 +17,9 @@ This repository is structured into distinct progressive levels designed to maste
 
 | Level       | Focus Area                               |     Status     | Key Highlights                                                                         |
 | :---------- | :--------------------------------------- | :------------: | :------------------------------------------------------------------------------------- |
-| **Level 1** | **Web Fundamentals**                     |  ✅ Completed  | Semantic HTML5, CSS layout & styling, DOM manipulation, JS events & calculations       |
-| **Level 2** | **Front-End Frameworks & Responsive UI** | 🔄 In Progress | Bootstrap 5 12-column grid, Bulma card components, responsive multi-breakpoint layouts |
-| **Level 3** | **Advanced Web Concepts**                |  ⏳ Upcoming   | Dynamic web applications, complex UI integrations, and project enhancements            |
+| **Level 1** | **Web Fundamentals**                     | ✅ Completed | Semantic HTML5, CSS layout & styling, DOM manipulation, JS events & calculations         |
+| **Level 2** | **Front-End Frameworks & Responsive UI** | ✅ Completed | Bootstrap 5 grid, Bulma cards, CSS media queries & mobile-friendly hamburger menu         |
+| **Level 3** | **Advanced Web Concepts**                | ⏳ Upcoming  | Dynamic web applications, complex UI integrations, and project enhancements              |
 
 ---
 
@@ -41,8 +41,11 @@ Cognifyz-Internship/
 │   │   ├── index.html                    # Bootstrap 5 12-column responsive grid showcase
 │   │   ├── bulma.html                    # Bulma CSS responsive card component showcase
 │   │   ├── styles.css                    # Micro-interactions, hover effects & theme enhancements
-│   │   └── README.md                     # Detailed Task-1 framework documentation
-│   └── Task-2/                           # (In Progress / Next Module)
+│   └── Task-2/                           # Responsive Web Design & Mobile Menu
+│       ├── index.html                    # Responsive webpage with collapsible hamburger menu
+│       ├── styles.css                    # CSS Media queries (Mobile, Tablet, Desktop, Wide)
+│       ├── script.js                     # Hamburger drawer controller & live viewport tracker
+│       └── README.md                     # Detailed Task-2 media queries documentation
 │
 ├── Level-3/
 │   ├── Task-1/                           # (Upcoming)
@@ -94,9 +97,23 @@ Cognifyz-Internship/
       - **Responsive Columns**: Bulma's `columns is-multiline` configured with `is-12-mobile`, `is-6-tablet`, and `is-4-desktop`.
 - **Technologies**: Bootstrap 5.3.3, Bulma 1.0.2, Font Awesome 6, Bootstrap Icons, Custom CSS3.
 
-#### **Task 2: (In Progress)**
+#### **Task 2: Responsive Web Design & Mobile Hamburger Navigation Menu**
 
-- _Work in progress — upcoming responsive and UI components._
+- **Objective**: Convert a basic webpage into a responsive layout that adapts across screen sizes using CSS media queries, and build a mobile-friendly collapsible hamburger navigation menu using HTML and CSS.
+- **Implementations**:
+   1. **CSS Media Queries Architecture**:
+      - **Mobile XS (`< 480px`)**: Compact typography, optimized touch padding, and single-column flow.
+      - **Mobile (`< 768px`)**: Hides horizontal desktop navigation bar, activates the animated hamburger toggle button, and stacks multi-column grids and form fields into 1-column layouts.
+      - **Tablet (`768px – 991px`)**: 2-Column responsive grid displays, centered hero presentation, and adaptive typography scaling.
+      - **Desktop (`992px – 1199px`)**: Full horizontal navigation links, 3-column features grid, and 50%/50% responsive split demo.
+      - **Ultra-Wide (`≥ 1200px`)**: 1240px centered layout constraint with 4-column card spans.
+   2. **Collapsible Mobile Hamburger Menu**:
+      - 3-bar hamburger icon morphing into an 'X' using pure CSS transforms (`translateY`, `rotate(45deg)`, `rotate(-45deg)`).
+      - Sliding drawer panel (`translateX(100%)` to `translateX(0)`) with backdrop blur overlay and body scroll prevention (`menu-open`).
+      - Full accessibility support with `aria-expanded`, `aria-controls`, `Escape` key close, and auto-closing on viewport resize or link selection.
+   3. **Live Viewport & Breakpoint Tracker**:
+      - Real-time status widget displaying current window resolution and active media query tier.
+- **Technologies**: Semantic HTML5, Vanilla CSS3 (Media Queries, Flexbox, CSS Grid), Vanilla JavaScript (ES6+), Font Awesome 6.
 
 ---
 

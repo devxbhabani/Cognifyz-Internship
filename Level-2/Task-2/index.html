@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cognifyz Internship Level 2 Task 2 - Responsive Webpage Design with CSS Media Queries and Collapsible Mobile Hamburger Navigation Menu">
+    <title>Responsive Web Design & Mobile Navigation | Level 2 Task 2</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Real-time Viewport & Breakpoint Tracker -->
+    <aside class="screen-indicator" id="screenIndicator" aria-label="Screen Viewport Indicator">
+        <span class="indicator-dot"></span>
+        <span class="indicator-label" id="breakpointName">Desktop</span>
+        <span class="indicator-size" id="viewportDimensions">1440 × 900</span>
+    </aside>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span class="badge">Cognifyz Level 2</span>
+            <p><strong>Task 2:</strong> Responsive Web Design using CSS Media Queries &amp; Hamburger Menu</p>
+            <a href="#breakpoints" class="announcement-link">Explore Breakpoints <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="navbar-header" id="navbarHeader">
+        <nav class="container nav-container" aria-label="Main Navigation">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-logo" id="brandLogo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">Cognifyz</span>
+                    <span class="brand-sub">Internship · L2 Task 2</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="nav-links" id="desktopNavLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#breakpoints" class="nav-link">Breakpoints</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#components" class="nav-link">Components</a></li>
+                <li><a href="#pricing" class="nav-link">Showcase</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Header Action Button (Desktop) -->
+            <div class="nav-actions">
+                <a href="#features" class="btn btn-outline nav-btn-secondary">Learn More</a>
+                <a href="#contact" class="btn btn-primary nav-btn-primary">Get In Touch</a>
+                
+                <!-- Mobile Hamburger Toggle Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+                    <span class="hamburger-bar bar-1"></span>
+                    <span class="hamburger-bar bar-2"></span>
+                    <span class="hamburger-bar bar-3"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Drawer Navigation Overlay & Menu -->
+        <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true"></div>
+        <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation Menu">
+            <div class="mobile-drawer-header">
+                <div class="logo-icon small">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <span class="mobile-drawer-title">Navigation Menu</span>
+                <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="mobile-drawer-status">
+                <span class="status-pill"><i class="fa-solid fa-mobile-screen"></i> Mobile View Active</span>
+            </div>
+
+            <ul class="mobile-nav-list">
+                <li><a href="#hero" class="mobile-nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#breakpoints" class="mobile-nav-link"><i class="fa-solid fa-sliders"></i> Breakpoints &amp; Queries</a></li>
+                <li><a href="#features" class="mobile-nav-link"><i class="fa-solid fa-cubes"></i> Responsive Features</a></li>
+                <li><a href="#components" class="mobile-nav-link"><i class="fa-solid fa-shapes"></i> UI Components</a></li>
+                <li><a href="#pricing" class="mobile-nav-link"><i class="fa-solid fa-layer-group"></i> Showcase Grid</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+            </ul>
+
+            <div class="mobile-drawer-footer">
+                <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
+                <div class="mobile-socials">
+                    <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </aside>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="pill-tag">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> 100% Fluid &amp; Mobile-First
+                    </div>
+                    <h1 class="hero-title">
+                        Adaptive Layouts with <span class="gradient-text">CSS Media Queries</span> &amp; Modern Navigation
+                    </h1>
+                    <p class="hero-description">
+                        This webpage demonstrates advanced responsive web design techniques. The layout smoothly rearranges across mobile, tablet, desktop, and ultra-wide viewports, featuring an animated hamburger menu with accessibility-focused states.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#breakpoints" class="btn btn-primary btn-lg">
+                            <i class="fa-solid fa-compass"></i> Explore Breakpoints
+                        </a>
+                        <a href="#features" class="btn btn-secondary btn-lg">
+                            <i class="fa-solid fa-code"></i> View CSS Architecture
+                        </a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <span class="metric-number">4+</span>
+                            <span class="metric-label">Responsive Breakpoints</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">&lt;768px</span>
+                            <span class="metric-label">Hamburger Trigger</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">0</span>
+                            <span class="metric-label">CSS Frameworks (Vanilla)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Visual Card -->
+                <div class="hero-visual">
+                    <div class="mockup-frame">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="mockup-search-bar">
+                                <i class="fa-solid fa-lock"></i>
+                                <span>cognifyz-internship.local/level2/task2</span>
+                            </div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-card">
+                                <div class="mockup-badge">
+                                    <i class="fa-solid fa-mobile-screen-button"></i> Mobile-First Standard
+                                </div>
+                                <h3>Adaptive Media Query System</h3>
+                                <p>Resize your browser to witness the navigation bar collapse and multi-column grid stack dynamically.</p>
+                                
+                                <div class="mockup-code-snippet">
+                                    <span class="code-comment">/* Responsive Media Query Example */</span>
+                                    <code>@media (max-width: 768px) {</code>
+                                    <code>&nbsp;&nbsp;.navbar-links { display: none; }</code>
+                                    <code>&nbsp;&nbsp;.hamburger-btn { display: flex; }</code>
+                                    <code>}</code>
+                                </div>
+
+                                <div class="mockup-status-strip">
+                                    <div class="status-item">
+                                        <i class="fa-solid fa-check-circle"></i> Pure CSS Media Queries
+                                    </div>
+                                    <div class="status-item">
+                                        <i class="fa-solid fa-check-circle"></i> Accessible Hamburger
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Media Queries & Breakpoints Breakdown -->
+        <section class="section breakpoints-section" id="breakpoints">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Responsive Core</span>
+                    <h2 class="section-title">Media Queries Breakpoint Strategy</h2>
+                    <p class="section-subtitle">
+                        Every component on this page is engineered using tailored CSS media queries to guarantee flawless readability and hierarchy across all screen dimensions.
+                    </p>
+                </div>
+
+                <div class="breakpoints-grid">
+                    <!-- Mobile Card -->
+                    <div class="breakpoint-card" id="bpMobileCard">
+                        <div class="bp-icon mobile-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <div class="bp-meta">
+                            <span class="bp-tag">Mobile</span>
+                            <span class="bp-query">&lt; 768px</span>
+                        </div>
+                        <h3 class="bp-title">Mobile Portrait &amp; Compact</h3>
+                        <p class="bp-desc">
+                            Horizontal links collapse into the animated hamburger menu. Content cards stack into single columns with touch-optimized margins and large tap targets.
+                        </p>
+                        <ul class="bp-features">
+                            <li><i class="fa-solid fa-check"></i> Hamburger menu drawer toggle</li>
+                            <li><i class="fa-solid fa-check"></i> 1-Column fluid content flow</li>
+                            <li><i class="fa-solid fa-check"></i> Minimum 44px touch targets</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tablet Card -->
+                    <div class="breakpoint-card" id="bpTabletCard">
+                        <div class="bp-icon tablet-icon">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                        </div>
+                        <div class="bp-meta">
+                            <span class="bp-tag">Tablet</span>
+                            <span class="bp-query">768px – 991px</span>
+                        </div>
+                        <h3 class="bp-title">Tablet &amp; Medium Displays</h3>
+                        <p class="bp-desc">
+                            Grids expand into 2-column balanced layouts. Header retains streamlined spacing, and typography scales up proportionately for enhanced legibility.
+                        </p>
+                        <ul class="bp-features">
+                            <li><i class="fa-solid fa-check"></i> 2-Column flexible grid systems</li>
+                            <li><i class="fa-solid fa-check"></i> Adjusted hero spacing &amp; padding</li>
+                            <li><i class="fa-solid fa-check"></i> Mid-tier font scaling via clamp()</li>
+                        </ul>
+                    </div>
+
+                    <!-- Desktop Card -->
+                    <div class="breakpoint-card" id="bpDesktopCard">
+                        <div class="bp-icon desktop-icon">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+                        <div class="bp-meta">
+                            <span class="bp-tag">Desktop</span>
+                            <span class="bp-query">992px – 1199px</span>
+                        </div>
+                        <h3 class="bp-title">Desktop &amp; Laptops</h3>
+                        <p class="bp-desc">
+                            Full horizontal navigation bar becomes active. Multi-column cards display 3 columns, and asymmetric sidebars sit comfortably alongside main content.
+                        </p>
+                        <ul class="bp-features">
+                            <li><i class="fa-solid fa-check"></i> Full desktop navigation links</li>
+                            <li><i class="fa-solid fa-check"></i> 3-Column structured feature grid</li>
+                            <li><i class="fa-solid fa-check"></i> Interactive hover micro-effects</li>
+                        </ul>
+                    </div>
+
+                    <!-- Ultra Wide Card -->
+                    <div class="breakpoint-card" id="bpWideCard">
+                        <div class="bp-icon wide-icon">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <div class="bp-meta">
+                            <span class="bp-tag">Ultra Wide</span>
+                            <span class="bp-query">≥ 1200px</span>
+                        </div>
+                        <h3 class="bp-title">Large Screens &amp; Monitors</h3>
+                        <p class="bp-desc">
+                            Content is gracefully constrained within a centered max-width container, preventing overstretching while maintaining optimal line lengths for reading.
+                        </p>
+                        <ul class="bp-features">
+                            <li><i class="fa-solid fa-check"></i> 4-Column extensive layouts</li>
+                            <li><i class="fa-solid fa-check"></i> 1240px centered max-width</li>
+                            <li><i class="fa-solid fa-check"></i> High-resolution asset rendering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Benefits Section -->
+        <section class="section features-section" id="features">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Task Deliverables</span>
+                    <h2 class="section-title">Responsive Design Techniques</h2>
+                    <p class="section-subtitle">
+                        Key design practices implemented to convert standard static pages into flexible, modern responsive experiences.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </div>
+                        <h3>Animated Hamburger Menu</h3>
+                        <p>
+                            Transitioning 3-bar icon that morphs into a close "X" symbol with pure CSS transforms and transitions upon activation.
+                        </p>
+                        <div class="feature-tag">HTML &amp; CSS Driven</div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-bezier-curve"></i>
+                        </div>
+                        <h3>Fluid CSS Grid &amp; Flexbox</h3>
+                        <p>
+                            Dynamic column wrapping utilizing <code>grid-template-columns</code> and <code>minmax()</code> combined with targeted media query overrides.
+                        </p>
+                        <div class="feature-tag">Layout Precision</div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                        <h3>Responsive Images &amp; Media</h3>
+                        <p>
+                            All images feature <code>max-width: 100%</code>, automatic height retention, and responsive aspect-ratio containers to prevent layout shifts.
+                        </p>
+                        <div class="feature-tag">CLS Optimized</div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-text-height"></i>
+                        </div>
+                        <h3>Fluid Typography with clamp()</h3>
+                        <p>
+                            Headlines smoothly scale between small mobile viewports and large desktop screens without awkward jarring jumps.
+                        </p>
+                        <div class="feature-tag">Modern CSS</div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-universal-access"></i>
+                        </div>
+                        <h3>Mobile Touch &amp; A11y Friendly</h3>
+                        <p>
+                            Meets WCAG accessibility standards with <code>aria-expanded</code> states, focus rings, and touch target sizes exceeding 48px.
+                        </p>
+                        <div class="feature-tag">Accessibility Ready</div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3>Zero External Dependency Bloat</h3>
+                        <p>
+                            Engineered with clean Vanilla CSS and lightweight modern HTML, eliminating bulky dependencies for ultra-fast load times.
+                        </p>
+                        <div class="feature-tag">High Performance</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive UI Components Showcase -->
+        <section class="section components-section" id="components">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Component Adaptation</span>
+                    <h2 class="section-title">How Different UI Elements Adapt</h2>
+                    <p class="section-subtitle">
+                        See how multi-column cards, media objects, and sidebars reorder themselves when the screen size shifts.
+                    </p>
+                </div>
+
+                <!-- Showcase Two-Column Responsive Split -->
+                <div class="component-split-grid">
+                    <div class="split-col content-side">
+                        <div class="pill-badge">Flexible Media Object</div>
+                        <h3>Asymmetric Layout Reordering</h3>
+                        <p>
+                            On desktop screens (≥992px), this block sits side-by-side with the interactive preview. On tablets and mobile screens, it gracefully stacks vertically to preserve reading ergonomics.
+                        </p>
+                        <div class="checklist">
+                            <div class="check-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <strong>Desktop:</strong> Side-by-side 55% / 45% flex split.
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <strong>Mobile &amp; Tablet:</strong> 100% full-width stacked column.
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <strong>Images:</strong> Retain strict 16:9 aspect ratio and rounded card radii.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-col preview-side">
+                        <div class="responsive-card-demo">
+                            <div class="demo-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80" alt="Responsive Web Development Workspace" loading="lazy">
+                                <span class="image-pill"><i class="fa-solid fa-display"></i> Multi-Device</span>
+                            </div>
+                            <div class="demo-card-content">
+                                <div class="demo-tag">Responsive Container</div>
+                                <h4>Fluid Image &amp; Card Architecture</h4>
+                                <p>Resize your browser to observe this card adapt fluidly without pixel distortion or horizontal scrollbars.</p>
+                                <div class="demo-stats">
+                                    <span><i class="fa-regular fa-clock"></i> 60fps Animation</span>
+                                    <span><i class="fa-solid fa-check-double"></i> Zero Overflow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Card Showcase & Plans -->
+        <section class="section showcase-section" id="pricing">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Interactive Cards</span>
+                    <h2 class="section-title">Responsive Cards Showcase</h2>
+                    <p class="section-subtitle">
+                        Compare how cards adapt across 1, 2, and 3 columns depending on available viewport width.
+                    </p>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <!-- Card 1 -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-icon"><i class="fa-solid fa-mobile"></i></div>
+                            <h3 class="plan-name">Mobile View</h3>
+                            <div class="plan-target">&lt; 768px Viewport</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Hamburger Navigation Active</li>
+                            <li><i class="fa-solid fa-check"></i> 1 Column Card Stack</li>
+                            <li><i class="fa-solid fa-check"></i> Full-width Interactive Buttons</li>
+                            <li><i class="fa-solid fa-check"></i> Vertical Form Input Stacking</li>
+                        </ul>
+                        <button class="btn btn-outline btn-block">Inspect Rules</button>
+                    </div>
+
+                    <!-- Card 2 (Featured) -->
+                    <div class="plan-card featured">
+                        <div class="popular-ribbon">Recommended</div>
+                        <div class="plan-header">
+                            <div class="plan-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3 class="plan-name">Adaptive Core</h3>
+                            <div class="plan-target">Fluid Responsive (All Viewports)</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Dynamic Fluid CSS Grid</li>
+                            <li><i class="fa-solid fa-check"></i> Smooth Transform Hamburger</li>
+                            <li><i class="fa-solid fa-check"></i> CSS Media Query Breakpoints</li>
+                            <li><i class="fa-solid fa-check"></i> Zero Layout Shifts (CLS 0)</li>
+                            <li><i class="fa-solid fa-check"></i> High Contrast Accessibility</li>
+                        </ul>
+                        <button class="btn btn-primary btn-block">View Implementation</button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <div class="plan-icon"><i class="fa-solid fa-display"></i></div>
+                            <h3 class="plan-name">Desktop View</h3>
+                            <div class="plan-target">≥ 992px Viewport</div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Horizontal Nav Menu Display</li>
+                            <li><i class="fa-solid fa-check"></i> 3 &amp; 4 Column Grid Spans</li>
+                            <li><i class="fa-solid fa-check"></i> Hover Lift Micro-Interactions</li>
+                            <li><i class="fa-solid fa-check"></i> Dual Column Form Fields</li>
+                        </ul>
+                        <button class="btn btn-outline btn-block">Inspect Rules</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Form / Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-header text-center">
+                        <span class="section-eyebrow">Adaptive Form</span>
+                        <h2 class="section-title">Responsive Contact &amp; Feedback Form</h2>
+                        <p class="section-subtitle">
+                            This form shifts from a 2-column input grid on desktop into a unified 1-column layout on mobile devices.
+                        </p>
+                    </div>
+
+                    <form class="responsive-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userName"><i class="fa-regular fa-user"></i> Full Name</label>
+                                <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. Alex Johnson" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail"><i class="fa-regular fa-envelope"></i> Email Address</label>
+                                <input type="email" id="userEmail" name="email" class="form-input" placeholder="alex@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="deviceType"><i class="fa-solid fa-mobile-screen"></i> Testing Device</label>
+                                <select id="deviceType" name="device" class="form-input">
+                                    <option value="mobile">Mobile Phone (&lt; 768px)</option>
+                                    <option value="tablet">Tablet / iPad (768px – 991px)</option>
+                                    <option value="desktop" selected>Desktop / Laptop (≥ 992px)</option>
+                                    <option value="ultrawide">Ultra-wide Monitor (≥ 1200px)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="feedbackRating"><i class="fa-regular fa-star"></i> Responsiveness Rating</label>
+                                <select id="feedbackRating" name="rating" class="form-input">
+                                    <option value="5">⭐⭐⭐⭐⭐ Excellent (100% Fluid)</option>
+                                    <option value="4">⭐⭐⭐⭐ Good (Minor adjustments)</option>
+                                    <option value="3">⭐⭐⭐ Satisfactory</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userMessage"><i class="fa-regular fa-comment-dots"></i> Message or Observations</label>
+                            <textarea id="userMessage" name="message" class="form-input textarea" rows="4" placeholder="Enter your review on the responsive layout and hamburger menu..."></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg" id="submitFormBtn">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Feedback
+                            </button>
+                        </div>
+
+                        <div class="form-notification" id="formNotification" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Responsive Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <div class="brand-logo footer-logo">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-title">Cognifyz</span>
+                            <span class="brand-sub">Internship Project</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Level 2 - Task 2 submission for Cognifyz Technologies Web Development Internship. Fully responsive design featuring pure CSS media queries and a mobile hamburger menu.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://cognifyz.com" target="_blank" rel="noopener" aria-label="Cognifyz Website"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#breakpoints">Media Queries</a></li>
+                        <li><a href="#features">Responsive Features</a></li>
+                        <li><a href="#components">UI Components</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Breakpoints Tested</h4>
+                    <ul class="footer-links">
+                        <li><a href="#breakpoints">Mobile (&lt; 768px)</a></li>
+                        <li><a href="#breakpoints">Tablet (768px - 991px)</a></li>
+                        <li><a href="#breakpoints">Desktop (992px - 1199px)</a></li>
+                        <li><a href="#breakpoints">Ultra-Wide (≥ 1200px)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Internship Details</h4>
+                    <ul class="footer-meta-list">
+                        <li><strong>Track:</strong> Web Development</li>
+                        <li><strong>Level:</strong> Level 2</li>
+                        <li><strong>Task:</strong> Task 2 (Responsive Design)</li>
+                        <li><strong>Framework:</strong> Vanilla HTML5 &amp; CSS3</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cognifyz Technologies Internship. Completed by Bhabani Sankar Jana.</p>
+                <div class="footer-bottom-links">
+                    <a href="../Task-1/index.html">← View Task 1 (Frameworks)</a>
+                    <a href="../../README.md">Main Repository README</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JavaScript for Hamburger Toggle & Live Breakpoint Tracker -->
+    <script src="script.js"></script>
+</body>
+</html>
