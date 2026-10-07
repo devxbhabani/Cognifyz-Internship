@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cognifyz Internship Level 3 Task 1 - Image Manipulation: CSS Click-to-Enlarge Image Gallery & Automated CSS Image Slideshow">
+    <title>Image Gallery & Automated Slideshow | Level 3 Task 1</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar-header" id="navbarHeader">
+        <nav class="container nav-container" aria-label="Main Navigation">
+            <a href="#" class="brand-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-photo-film"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">Cognifyz</span>
+                    <span class="brand-sub">Internship · Level 3 Task 1</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Overview</a></li>
+                <li><a href="#slideshow-section" class="nav-link">Auto Slideshow</a></li>
+                <li><a href="#gallery-section" class="nav-link">Interactive Gallery</a></li>
+                <li><a href="#tech-specs" class="nav-link">CSS Mechanics</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#gallery-section" class="btn btn-outline nav-btn">Explore Gallery</a>
+                <a href="#slideshow-section" class="btn btn-primary nav-btn">View Slideshow</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container text-center">
+                <div class="pill-badge">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Image Manipulation Showcase
+                </div>
+                <h1 class="hero-title">
+                    CSS Image Gallery &amp; <span class="gradient-text">Automated Slideshow</span>
+                </h1>
+                <p class="hero-description">
+                    Demonstrating advanced CSS visual manipulation techniques: a responsive image gallery featuring thumbnails that enlarge with fluid modal animations, paired with a seamless automated CSS keyframe image slideshow.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#slideshow-section" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-play"></i> Experience Auto Slideshow
+                    </a>
+                    <a href="#gallery-section" class="btn btn-secondary btn-lg">
+                        <i class="fa-solid fa-images"></i> Click-to-Enlarge Gallery
+                    </a>
+                </div>
+
+                <!-- Metric Badges -->
+                <div class="hero-stats-row">
+                    <div class="stat-box">
+                        <span class="stat-number">Pure CSS</span>
+                        <span class="stat-label">Automated Transitions</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-number">Click-to-Enlarge</span>
+                        <span class="stat-label">Thumbnail Spotlight</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-number">100% Fluid</span>
+                        <span class="stat-label">Responsive Layout</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 1: Automated Image Slideshow Section -->
+        <section class="section slideshow-section" id="slideshow-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Deliverable 1</span>
+                    <h2 class="section-title">Automated Image Slideshow</h2>
+                    <p class="section-subtitle">
+                        Automatically transitions between high-resolution frames using CSS keyframe animations. Hover over the slideshow to pause playback!
+                    </p>
+                </div>
+
+                <!-- Slideshow Wrapper -->
+                <div class="slideshow-wrapper">
+                    <!-- Top Status Strip -->
+                    <div class="slideshow-topbar">
+                        <div class="playback-badge">
+                            <span class="pulse-indicator"></span>
+                            <span class="playback-text">Auto-Transitioning · Hover to Pause</span>
+                        </div>
+                        <div class="slideshow-timer-bar">
+                            <div class="timer-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Slide Carousel Track -->
+                    <div class="slideshow-viewport" id="slideshowViewport">
+                        <!-- Slide 1 -->
+                        <div class="slide-item active-slide" data-index="0">
+                            <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=1200&q=80" alt="Luminescent Aurora Borealis over mountains" class="slide-image">
+                            <div class="slide-overlay">
+                                <span class="slide-category"><i class="fa-solid fa-mountain-sun"></i> Nature &amp; Cosmos</span>
+                                <h3 class="slide-title">Luminescent Aurora Borealis</h3>
+                                <p class="slide-desc">Vibrant celestial ribbons illuminate the Arctic night sky above snow-capped mountain peaks.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slide-item" data-index="1">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Minimalist Architectural Geometry" class="slide-image">
+                            <div class="slide-overlay">
+                                <span class="slide-category"><i class="fa-solid fa-building"></i> Architecture &amp; Form</span>
+                                <h3 class="slide-title">Minimalist Architectural Geometry</h3>
+                                <p class="slide-desc">Harmonious interplay of light, shadow, and cantilevered concrete angles in contemporary design.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide-item" data-index="2">
+                            <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80" alt="Misty Alpine Forest and Pine Trees" class="slide-image">
+                            <div class="slide-overlay">
+                                <span class="slide-category"><i class="fa-solid fa-tree"></i> Wilderness</span>
+                                <h3 class="slide-title">Misty Alpine Pine Forest</h3>
+                                <p class="slide-desc">Dense evergreen forest shrouded in atmospheric morning mist and towering mountain ridges.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="slide-item" data-index="3">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Serene Ocean Twilight and Horizon" class="slide-image">
+                            <div class="slide-overlay">
+                                <span class="slide-category"><i class="fa-solid fa-water"></i> Seascape</span>
+                                <h3 class="slide-title">Serene Golden Ocean Twilight</h3>
+                                <p class="slide-desc">Gentle shorebreak waves reflecting the warm gradient glow of sunset along an endless horizon.</p>
+                            </div>
+                        </div>
+
+                        <!-- Manual Navigation Arrows -->
+                        <button class="slide-nav-btn prev-btn" id="prevSlideBtn" aria-label="Previous Slide">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slide-nav-btn next-btn" id="nextSlideBtn" aria-label="Next Slide">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Slide Navigation Dots -->
+                    <div class="slideshow-pagination" id="slideshowPagination">
+                        <button class="pagination-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="pagination-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="pagination-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                        <button class="pagination-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 2: Click-to-Enlarge Image Gallery Section -->
+        <section class="section gallery-section" id="gallery-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Deliverable 2</span>
+                    <h2 class="section-title">Interactive Click-to-Enlarge Gallery</h2>
+                    <p class="section-subtitle">
+                        Browse the curated collection below. Click any thumbnail to trigger the enlarged lightbox modal spotlight with zoom controls, metadata, and keyboard navigation.
+                    </p>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="gallery-filters" id="galleryFilters">
+                    <button class="filter-btn active" data-filter="all">All Photos (8)</button>
+                    <button class="filter-btn" data-filter="nature">Nature &amp; Peaks</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture &amp; Urban</button>
+                    <button class="filter-btn" data-filter="abstract">Abstract &amp; Cosmos</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Thumbnail 1 -->
+                    <article class="gallery-card" data-category="abstract">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Modern Developer Workspace"
+                             data-caption="Minimalist setup featuring clean ambient backlighting, high-performance laptop, and ergonomic aesthetics."
+                             data-category="Creative Tech">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Modern Developer Workspace" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Creative Tech</span>
+                            <h4 class="card-title">Modern Developer Workspace</h4>
+                            <p class="card-excerpt">Clean workspace ergonomic setup.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thumbnail 2 -->
+                    <article class="gallery-card" data-category="nature">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Alpine Peak in Morning Clouds"
+                             data-caption="Majestic granite mountain summits piercing through swirling misty morning clouds."
+                             data-category="Nature & Peaks">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Alpine Peak in Morning Clouds" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Nature &amp; Peaks</span>
+                            <h4 class="card-title">Alpine Peak in Morning Clouds</h4>
+                            <p class="card-excerpt">Majestic mountain summit view.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thumbnail 3 -->
+                    <article class="gallery-card" data-category="architecture">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Metropolitan High-Rise Facade"
+                             data-caption="Geometric steel and glass skyscraper reaching into the blue afternoon sky."
+                             data-category="Architecture">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Metropolitan High-Rise Facade" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Architecture</span>
+                            <h4 class="card-title">Metropolitan High-Rise Facade</h4>
+                            <p class="card-excerpt">Geometric corporate skyscraper.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thumbnail 4 -->
+                    <article class="gallery-card" data-category="abstract">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Deep Cosmic Stardust &amp; Nebula"
+                             data-caption="Enigmatic deep-space cosmic nebula gleaming with millions of distant stellar clusters."
+                             data-category="Cosmos">
+                            <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=600&q=80" alt="Deep Cosmic Stardust & Nebula" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Cosmos</span>
+                            <h4 class="card-title">Deep Cosmic Stardust &amp; Nebula</h4>
+                            <p class="card-excerpt">Vibrant deep space constellation.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thumbnail 5 -->
+                    <article class="gallery-card" data-category="nature">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Cascading Forest Waterfall"
+                             data-caption="Lush mossy canyon waterfall with rushing crystalline glacial water."
+                             data-category="Nature & Peaks">
+                            <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=600&q=80" alt="Cascading Forest Waterfall" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Nature &amp; Peaks</span>
+                            <h4 class="card-title">Cascading Forest Waterfall</h4>
+                            <p class="card-excerpt">Hidden emerald waterfall canyon.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thumbnail 6 -->
+                    <article class="gallery-card" data-category="architecture">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Cyberpunk Neon Boulevard"
+                             data-caption="Atmospheric wet city streets reflecting vibrant violet and electric blue neon streetlights."
+                             data-category="Architecture">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Cyberpunk Neon Boulevard" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Architecture</span>
+                            <h4 class="card-title">Cyberpunk Neon Boulevard</h4>
+                            <p class="card-excerpt">Nocturnal city neon reflections.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thumbnail 7 -->
+                    <article class="gallery-card" data-category="nature">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Golden Sahara Wind Dunes"
+                             data-caption="Sculpted desert ridges glowing with radiant warmth beneath dramatic shadows."
+                             data-category="Nature & Peaks">
+                            <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" alt="Golden Sahara Wind Dunes" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Nature &amp; Peaks</span>
+                            <h4 class="card-title">Golden Sahara Wind Dunes</h4>
+                            <p class="card-excerpt">Fluid curves of desert sand.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thumbnail 8 -->
+                    <article class="gallery-card" data-category="nature">
+                        <div class="thumbnail-wrapper" tabindex="0" role="button" aria-haspopup="dialog"
+                             data-full="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=85"
+                             data-title="Crystal Mountain Lake Mirror"
+                             data-caption="Glassy turquoise alpine waters reflecting mountain ridges on a clear pristine morning."
+                             data-category="Nature & Peaks">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Crystal Mountain Lake Mirror" class="thumbnail-image" loading="lazy">
+                            <div class="thumbnail-hover-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                                <span class="hover-text">Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card-info">
+                            <span class="card-tag">Nature &amp; Peaks</span>
+                            <h4 class="card-title">Crystal Mountain Lake Mirror</h4>
+                            <p class="card-excerpt">Tranquil reflection in alpine lake.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX ENLARGE MODAL COMPONENT -->
+        <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            
+            <div class="lightbox-dialog">
+                <!-- Close Button -->
+                <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close enlarged view">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- Navigation Previous / Next -->
+                <button class="lightbox-arrow prev-arrow" id="lightboxPrevBtn" aria-label="View previous image">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-arrow next-arrow" id="lightboxNextBtn" aria-label="View next image">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Image Showcase Container -->
+                <div class="lightbox-image-box">
+                    <div class="lightbox-loader" id="lightboxLoader">
+                        <div class="spinner"></div>
+                    </div>
+                    <img src="" alt="" id="lightboxImg" class="lightbox-image">
+                </div>
+
+                <!-- Lightbox Meta Footer -->
+                <div class="lightbox-details">
+                    <div class="lightbox-header-row">
+                        <div>
+                            <span class="lightbox-pill" id="lightboxCategory">Category</span>
+                            <h3 class="lightbox-title" id="lightboxTitle">Image Title</h3>
+                        </div>
+                        <div class="lightbox-counter" id="lightboxCounter">1 / 8</div>
+                    </div>
+                    <p class="lightbox-caption" id="lightboxCaption">Description of the enlarged image.</p>
+                    <div class="lightbox-shortcuts">
+                        <span><kbd>←</kbd> <kbd>→</kbd> Navigate</span>
+                        <span><kbd>ESC</kbd> Close</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 3: Technical Specifications & CSS Breakdown -->
+        <section class="section specs-section" id="tech-specs">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Technical Mastery</span>
+                    <h2 class="section-title">CSS Mechanics &amp; Architecture</h2>
+                    <p class="section-subtitle">
+                        An architectural breakdown of the CSS techniques utilized to achieve automated slide transitions and click-to-enlarge spotlight effects.
+                    </p>
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-sliders"></i></div>
+                        <h3>CSS Keyframes &amp; Animation</h3>
+                        <p>
+                            Slide transitions utilize pure CSS <code>@keyframes slideTransition</code> combined with <code>animation-timing-function: cubic-bezier</code> to produce smooth cross-fading and gentle scaling without layout thrashing.
+                        </p>
+                        <div class="spec-code-tag">CSS @keyframes</div>
+                    </div>
+
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+                        <h3>Hover Pause Interaction</h3>
+                        <p>
+                            Leverages <code>animation-play-state: paused</code> on <code>:hover</code> states. Whenever the user hovers over the slideshow viewport, the timer and transition gracefully freeze.
+                        </p>
+                        <div class="spec-code-tag">:hover &amp; play-state</div>
+                    </div>
+
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        <h3>Click-to-Enlarge Modal</h3>
+                        <p>
+                            Thumbnails trigger a GPU-accelerated enlarged lightbox modal using <code>transform: scale()</code> and <code>opacity</code> transitions, accompanied by backdrop blur filters.
+                        </p>
+                        <div class="spec-code-tag">Scale &amp; Modal Blur</div>
+                    </div>
+
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-keyboard"></i></div>
+                        <h3>Accessible Controls (A11y)</h3>
+                        <p>
+                            Full keyboard support enabled for Left/Right arrow navigation, Tab focus states, screen reader ARIA roles (<code>role="dialog"</code>, <code>aria-modal="true"</code>), and Escape key dismiss.
+                        </p>
+                        <div class="spec-code-tag">WCAG 2.1 Ready</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-logo footer-logo">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-photo-film"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-title">Cognifyz</span>
+                            <span class="brand-sub">Internship · Level 3</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Level 3 - Task 1 submission for Cognifyz Technologies Web Development Internship. Click-to-enlarge gallery and automated CSS slideshow.
+                    </p>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Overview</a></li>
+                        <li><a href="#slideshow-section">Auto Slideshow</a></li>
+                        <li><a href="#gallery-section">Enlarged Gallery</a></li>
+                        <li><a href="#tech-specs">CSS Specs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-internship">
+                    <h4>Internship Details</h4>
+                    <ul>
+                        <li><strong>Track:</strong> Web Development</li>
+                        <li><strong>Level:</strong> Level 3</li>
+                        <li><strong>Task:</strong> Task 1 (Image Manipulation)</li>
+                        <li><strong>Technologies:</strong> HTML5, CSS3, JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cognifyz Technologies Internship. Completed by Bhabani Sankar Jana.</p>
+                <div class="footer-bottom-links">
+                    <a href="../../Level-2/Task-2/index.html">← View Level 2 Task 2</a>
+                    <a href="../../README.md">Main Repository README</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Controller -->
+    <script src="script.js"></script>
+</body>
+</html>

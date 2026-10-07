@@ -17,9 +17,9 @@ This repository is structured into distinct progressive levels designed to maste
 
 | Level       | Focus Area                               |     Status     | Key Highlights                                                                         |
 | :---------- | :--------------------------------------- | :------------: | :------------------------------------------------------------------------------------- |
-| **Level 1** | **Web Fundamentals**                     | ✅ Completed | Semantic HTML5, CSS layout & styling, DOM manipulation, JS events & calculations         |
-| **Level 2** | **Front-End Frameworks & Responsive UI** | ✅ Completed | Bootstrap 5 grid, Bulma cards, CSS media queries & mobile-friendly hamburger menu         |
-| **Level 3** | **Advanced Web Concepts**                | ⏳ Upcoming  | Dynamic web applications, complex UI integrations, and project enhancements              |
+| **Level 1** | **Web Fundamentals**                       | ✅ Completed | Semantic HTML5, CSS layout & styling, DOM manipulation, JS events & calculations         |
+| **Level 2** | **Front-End Frameworks & Responsive UI**   | ✅ Completed | Bootstrap 5 grid, Bulma cards, CSS media queries & mobile-friendly hamburger menu         |
+| **Level 3** | **Image Manipulation & Advanced Features** | 🔄 In Progress | CSS click-to-enlarge gallery modal, automated CSS keyframe slideshow                      |
 
 ---
 
@@ -48,7 +48,11 @@ Cognifyz-Internship/
 │       └── README.md                     # Detailed Task-2 media queries documentation
 │
 ├── Level-3/
-│   ├── Task-1/                           # (Upcoming)
+│   ├── Task-1/                           # Image Manipulation & Slideshow
+│   │   ├── index.html                    # Click-to-enlarge gallery & automated CSS slideshow
+│   │   ├── styles.css                    # Keyframe animations, lightbox modal & grid layout
+│   │   ├── script.js                     # Slideshow timer controller & lightbox modal manager
+│   │   └── README.md                     # Detailed Task-1 image manipulation documentation
 │   └── Task-2/                           # (Upcoming)
 │
 └── README.md                             # Repository Master Documentation
@@ -117,9 +121,27 @@ Cognifyz-Internship/
 
 ---
 
-### Level 3: Advanced Full Stack Concepts (Upcoming)
+### Level 3: Advanced Web Concepts & Image Manipulation
 
-- Advanced interactive applications, API integrations, and progressive web capabilities.
+#### **Task 1: Image Manipulation (Click-to-Enlarge Gallery & Automated Slideshow)**
+
+- **Objective**: Use CSS to create an image gallery with thumbnail images that enlarge when clicked, and build an automated image slideshow that transitions between images using HTML and CSS.
+- **Implementations**:
+   1. **Automated Image Slideshow**:
+      - Automated slide transitions every 5 seconds using CSS animations.
+      - Real-time animated progress timer bar.
+      - **Pause-on-hover interaction**: Freezes the slide transitions and progress bar when cursor hovers over the slideshow viewport.
+      - Interactive manual controls (Left/Right chevrons & pagination dots).
+   2. **Click-to-Enlarge Gallery & Lightbox Spotlight**:
+      - Responsive 4-column thumbnail grid with fluid hover zoom effects (`scale(1.08)`) and expand overlays.
+      - Modal lightbox spotlight displaying high-resolution images, category pills, titles, detailed captions, and counter indicators.
+      - Full keyboard accessibility (`Escape` to close, `←` and `→` arrow keys to cycle images).
+      - Category filter pills (`All`, `Nature & Peaks`, `Architecture & Urban`, `Abstract & Cosmos`).
+- **Technologies**: Semantic HTML5, Vanilla CSS3 (Keyframes, Transitions, Flexbox, CSS Grid), Vanilla JavaScript (ES6+), Font Awesome 6.
+
+#### **Task 2: (Upcoming)**
+
+- *Upcoming Level 3 Task 2 module.*
 
 ---
 
