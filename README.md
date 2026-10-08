@@ -19,7 +19,7 @@ This repository is structured into distinct progressive levels designed to maste
 | :---------- | :--------------------------------------- | :------------: | :------------------------------------------------------------------------------------- |
 | **Level 1** | **Web Fundamentals**                       | ✅ Completed | Semantic HTML5, CSS layout & styling, DOM manipulation, JS events & calculations         |
 | **Level 2** | **Front-End Frameworks & Responsive UI**   | ✅ Completed | Bootstrap 5 grid, Bulma cards, CSS media queries & mobile-friendly hamburger menu         |
-| **Level 3** | **Image Manipulation & Advanced Features** | 🔄 In Progress | CSS click-to-enlarge gallery modal, automated CSS keyframe slideshow                      |
+| **Level 3** | **Image Manipulation & Capstone Landing Page** | ✅ Completed | Click-to-enlarge gallery, automated CSS slideshow, and internship landing page            |
 
 ---
 
@@ -53,7 +53,11 @@ Cognifyz-Internship/
 │   │   ├── styles.css                    # Keyframe animations, lightbox modal & grid layout
 │   │   ├── script.js                     # Slideshow timer controller & lightbox modal manager
 │   │   └── README.md                     # Detailed Task-1 image manipulation documentation
-│   └── Task-2/                           # (Upcoming)
+│   └── Task-2/                           # Web Developer Internship Landing Page
+│       ├── index.html                    # Capstone landing page & application modal markup
+│       ├── styles.css                    # Modern CSS design system, responsive grids & animations
+│       ├── script.js                     # Modal controller, FAQ accordion & scroll handlers
+│       └── README.md                     # Detailed Task-2 landing page documentation
 │
 └── README.md                             # Repository Master Documentation
 ```
@@ -139,9 +143,17 @@ Cognifyz-Internship/
       - Category filter pills (`All`, `Nature & Peaks`, `Architecture & Urban`, `Abstract & Cosmos`).
 - **Technologies**: Semantic HTML5, Vanilla CSS3 (Keyframes, Transitions, Flexbox, CSS Grid), Vanilla JavaScript (ES6+), Font Awesome 6.
 
-#### **Task 2: (Upcoming)**
+#### **Task 2: Web Developer Internship Landing Page (Capstone Project)**
 
-- *Upcoming Level 3 Task 2 module.*
+- **Objective**: Create a high-converting, modern landing page for the Cognifyz Technologies Web Developer Internship featuring a clear headline, program introduction and duration, core highlights and benefits, desired qualifications, prominent call-to-action buttons, and comprehensive contact information.
+- **Implementations**:
+   1. **Prominent Hero Section**: Features the official headline (*"Web Developer Internship Opportunities at Cognifyz Technologies"*), concise overview text, dual CTAs (*"Apply Now"*, *"Learn More"*), and an interactive roadmap card with live statistics.
+   2. **Program Overview & Core Benefits**: Dedicated cards highlighting the 1-Month (4-Week) flexible structure, hands-on project deliverables, 1-on-1 mentorship, verified certifications & LOR, and pre-placement opportunities.
+   3. **Milestone Curriculum & Qualifications**: Progressive breakdown across Level 1, Level 2, and Level 3 tracks, accompanied by technical requirements (HTML5, CSS3, JavaScript, Bootstrap/Bulma, Git) and applicant attributes.
+   4. **Interactive Application Modal**: Fast-track modal form with client-side field validation, preferred duration selector, GitHub URL input, and instant success confirmation view.
+   5. **Interactive FAQ Accordion**: Collapsible question-and-answer accordion addressing common internship inquiries.
+   6. **Comprehensive Contact Desk & Footer**: Dedicated contact channels (`contact@cognifyz.com`, `careers@cognifyz.com`), headquarters details, office hours, instant inquiry form, and navigation links.
+- **Technologies**: Semantic HTML5, Vanilla CSS3 (Custom Properties, Flexbox, CSS Grid, Glassmorphism, Micro-Animations), Vanilla JavaScript (ES6+), Font Awesome 6.
 
 ---
 
